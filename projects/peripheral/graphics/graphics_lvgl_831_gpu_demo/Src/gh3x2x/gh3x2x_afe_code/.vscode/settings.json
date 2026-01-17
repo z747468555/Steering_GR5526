@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "gh3x2x_afe_io_config.h": "c",
+        "gh3x2x_afe_ecg.h": "c"
+    }
+}

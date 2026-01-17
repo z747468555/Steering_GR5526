@@ -1,0 +1,11 @@
+.\objects\lv_printf.o: ..\..\..\..\..\external\lvgl_8.3.1\src\misc\lv_printf.c
+.\objects\lv_printf.o: ..\..\..\..\..\external\lvgl_8.3.1\src\misc\lv_printf.h
+.\objects\lv_printf.o: ..\..\..\..\..\external\lvgl_8.3.1\src\misc\../lv_conf_internal.h
+.\objects\lv_printf.o: D:\Software\Keil\keil5 538A\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\lv_printf.o: ..\..\..\..\..\external\lvgl_8.3.1\src\misc\../lv_conf_kconfig.h
+.\objects\lv_printf.o: ..\..\..\..\..\external\lvgl_8.3.1\src\core\../../lv_conf.h
+.\objects\lv_printf.o: D:\Software\Keil\keil5 538A\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\lv_printf.o: D:\Software\Keil\keil5 538A\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\lv_printf.o: ..\..\..\..\..\external\lvgl_8.3.1\src\misc\lv_types.h
+.\objects\lv_printf.o: D:\Software\Keil\keil5 538A\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\lv_printf.o: D:\Software\Keil\keil5 538A\ARM\ARMCC\Bin\..\include\float.h

@@ -1,0 +1,850 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: asd 747468555@qq.com, asd, LIC=WHYH9-4LG2L-DYGV3-AU9ZZ-6DJAT-NDK3L
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.38.0.0
+Toolchain Path:  D:\Software\Keil\keil5 538A\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      Segger\JL2CM3.dll V2.99.42.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+D:\Project\wristband_01_xyx_r_V1.7_250724\projects\peripheral\graphics\graphics_lvgl_831_gpu_demo\Keil_5\graphics_lvgl_831_gpu_demo.uvprojx
+Project File Date:  01/11/2026
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\Software\Keil\keil5 538A\ARM\ARMCC\Bin'
+Build target 'GRxx_Soc'
+compiling app_ecg_baremetal.c...
+..\Src\service\app_ecg_baremetal.c(80): warning:  #177-D: function "start_ecg_print_timer"  was declared but never referenced
+  static void start_ecg_print_timer(void)
+..\Src\service\app_ecg_baremetal.c: 1 warning, 0 errors
+compiling app_3220_task.c...
+compiling template.c...
+..\Src\lvgl_user_ui_manager\app_template\template.c(30): warning:  #144-D: a value of type "lv_obj_t *" cannot be used to initialize an entity of type "lv_btn_t *"
+      lv_btn_t *btn = lv_btn_create(page);
+..\Src\lvgl_user_ui_manager\app_template\template.c(33): warning:  #167-D: argument of type "lv_btn_t *" is incompatible with parameter of type "struct _lv_obj_t *"
+      lv_obj_set_size(btn,200,50);
+..\Src\lvgl_user_ui_manager\app_template\template.c(34): warning:  #167-D: argument of type "lv_btn_t *" is incompatible with parameter of type "struct _lv_obj_t *"
+      lv_obj_center(btn);
+..\Src\lvgl_user_ui_manager\app_template\template.c(35): warning:  #167-D: argument of type "lv_btn_t *" is incompatible with parameter of type "lv_obj_t *"
+      lv_label_t *label = lv_label_create(btn);
+..\Src\lvgl_user_ui_manager\app_template\template.c(35): warning:  #144-D: a value of type "lv_obj_t *" cannot be used to initialize an entity of type "lv_label_t *"
+      lv_label_t *label = lv_label_create(btn);
+..\Src\lvgl_user_ui_manager\app_template\template.c(36): warning:  #167-D: argument of type "lv_label_t *" is incompatible with parameter of type "lv_obj_t *"
+      lv_label_set_text(label,"[ui_template_page]");
+..\Src\lvgl_user_ui_manager\app_template\template.c(37): warning:  #167-D: argument of type "lv_label_t *" is incompatible with parameter of type "struct _lv_obj_t *"
+      lv_obj_center(label);
+..\Src\lvgl_user_ui_manager\app_template\template.c(3): warning:  #177-D: variable "click_cnt"  was declared but never referenced
+  static uint32_t click_cnt = 0;
+..\Src\lvgl_user_ui_manager\app_template\template.c: 8 warnings, 0 errors
+compiling app_brightness.c...
+compiling app_body_change.c...
+compiling ui_win_manager.c...
+..\Src\lvgl_user_ui_manager\ui_win_manager.c(5): warning:  #47-D: incompatible redefinition of macro "APP_LOG_TAG"  (declared at line 74 of "..\..\..\..\..\components\libraries\app_log\app_log.h")
+  #define APP_LOG_TAG	"ui_win"
+..\Src\lvgl_user_ui_manager\ui_win_manager.c(652): warning:  #224-D: the format string requires additional arguments
+          printf("screen[%d] init_top: %d ticks", id_new);
+..\Src\lvgl_user_ui_manager\ui_win_manager.c(676): warning:  #224-D: the format string requires additional arguments
+      printf("screen[%d] refr now: %d ticks", id_new);
+..\Src\lvgl_user_ui_manager\ui_win_manager.c(682): warning:  #224-D: the format string requires additional arguments
+          printf("screen[%d] delay work: %d ticks", id_new);
+..\Src\lvgl_user_ui_manager\ui_win_manager.c(620): warning:  #177-D: function "_wm_delete_prev_screen"  was declared but never referenced
+  static void  _wm_delete_prev_screen(void)
+..\Src\lvgl_user_ui_manager\ui_win_manager.c(227): warning:  #177-D: function "_wm_call_stack_get_parent_by_id"  was declared but never referenced
+  static screen_id_e _wm_call_stack_get_parent_by_id(screen_id_e id)
+..\Src\lvgl_user_ui_manager\ui_win_manager.c: 6 warnings, 0 errors
+compiling app_watchface.c...
+..\Src\lvgl_user_ui_manager\app_watchface\app_watchface.c(37): warning:  #223-D: function "app_environment_get_power" declared implicitly
+                  lv_label_set_text_fmt(p_watch->eletricity, "%u%%", app_environment_get_power());
+..\Src\lvgl_user_ui_manager\app_watchface\app_watchface.c(101): warning:  #167-D: argument of type "lv_img_t *" is incompatible with parameter of type "struct _lv_obj_t *"
+                  lv_obj_del(p_watch->msg_img);
+..\Src\lvgl_user_ui_manager\app_watchface\app_watchface.c(136): warning:  #513-D: a value of type "lv_obj_t *" cannot be assigned to an entity of type "lv_img_t *"
+              p_watch->msg_img = cookie_img_create(p_watch->screen,get_msg_snap_dsc());
+..\Src\lvgl_user_ui_manager\app_watchface\app_watchface.c(137): warning:  #167-D: argument of type "lv_img_t *" is incompatible with parameter of type "struct _lv_obj_t *"
+              lv_obj_set_style_bg_color(p_watch->msg_img,lv_color_black(),LV_PART_MAIN);
+..\Src\lvgl_user_ui_manager\app_watchface\app_watchface.c(138): warning:  #167-D: argument of type "lv_img_t *" is incompatible with parameter of type "struct _lv_obj_t *"
+              lv_obj_set_style_bg_opa(p_watch->msg_img, LV_OPA_COVER, LV_PART_MAIN);
+..\Src\lvgl_user_ui_manager\app_watchface\app_watchface.c(139): warning:  #167-D: argument of type "lv_img_t *" is incompatible with parameter of type "struct _lv_obj_t *"
+              lv_obj_set_pos(p_watch->msg_img,0,-LV_VER_RES);
+..\Src\lvgl_user_ui_manager\app_watchface\app_watchface.c(147): warning:  #167-D: argument of type "lv_img_t *" is incompatible with parameter of type "struct _lv_obj_t *"
+              lv_obj_set_y(p_watch->msg_img,data.y-LV_VER_RES);
+..\Src\lvgl_user_ui_manager\app_watchface\app_watchface.c(163): warning:  #167-D: argument of type "lv_img_t *" is incompatible with parameter of type "struct _lv_obj_t *"
+                  lv_obj_set_pos(p_watch->msg_img,0,-LV_VER_RES);
+..\Src\lvgl_user_ui_manager\app_watchface\app_watchface.c(164): warning:  #167-D: argument of type "lv_img_t *" is incompatible with parameter of type "struct _lv_obj_t *"
+                  lv_obj_del(p_watch->msg_img);
+..\Src\lvgl_user_ui_manager\app_watchface\app_watchface.c(173): warning:  #167-D: argument of type "lv_img_t *" is incompatible with parameter of type "struct _lv_obj_t *"
+                  lv_obj_set_pos(p_watch->msg_img,0,0);
+..\Src\lvgl_user_ui_manager\app_watchface\app_watchface.c(119): warning:  #177-D: variable "dir"  was declared but never referenced
+      lv_dir_t dir = 0;
+..\Src\lvgl_user_ui_manager\app_watchface\app_watchface.c(211): warning:  #223-D: function "app_environment_get_power" declared implicitly
+      if(app_environment_get_power() > 20)
+..\Src\lvgl_user_ui_manager\app_watchface\app_watchface.c(222): warning:  #223-D: function "app_environment_get_power" declared implicitly
+      lv_bar_set_value(p_watch->charger, app_environment_get_power(), LV_ANIM_OFF);
+..\Src\lvgl_user_ui_manager\app_watchface\app_watchface.c: 13 warnings, 0 errors
+compiling app_clock_set.c...
+..\Src\lvgl_user_ui_manager\app_clock_set\app_clock_set.c(31): warning:  #144-D: a value of type "void *" cannot be used to initialize an entity of type "screen_id_e"
+      [CLOCK_SET_ALARM]      = {&wd_img_app_clock_alarm,     "????????????", clock_set_item_clicked_cb, (void*)SCREEN_ID_ALARM},
+..\Src\lvgl_user_ui_manager\app_clock_set\app_clock_set.c(32): warning:  #144-D: a value of type "void *" cannot be used to initialize an entity of type "screen_id_e"
+      [CLOCK_SET_TIME]       = {&wd_img_app_clock_time_calc, "????????????", clock_set_item_clicked_cb, (void*)SCREEN_ID_TIME},
+..\Src\lvgl_user_ui_manager\app_clock_set\app_clock_set.c(33): warning:  #144-D: a value of type "void *" cannot be used to initialize an entity of type "screen_id_e"
+      [CLOCK_SET_STOPWATCH]  = {&wd_img_app_clock_stopwatch, "????????????", clock_set_item_clicked_cb, (void*)SCREEN_ID_STOPWATCH},
+..\Src\lvgl_user_ui_manager\app_clock_set\app_clock_set.c(75): warning:  #767-D: conversion from pointer to smaller integer
+      screen_id_e jump_id = (screen_id_e)lv_event_get_user_data(e);
+..\Src\lvgl_user_ui_manager\app_clock_set\app_clock_set.c: 4 warnings, 0 errors
+compiling app_container.c...
+compiling ui_win_def.c...
+..\Src\lvgl_user_ui_manager\ui_win_def.h(24): warning:  #77-D: this declaration has no storage class or type specifier
+  LV_FONT_DECLARE(font_12px);
+..\Src\lvgl_user_ui_manager\ui_win_def.h(24): warning:  #92-D: identifier-list parameters may only be used in a function definition
+  LV_FONT_DECLARE(font_12px);
+..\Src\lvgl_user_ui_manager\ui_win_def.h(25): warning:  #77-D: this declaration has no storage class or type specifier
+  LV_FONT_DECLARE(font_16px);
+..\Src\lvgl_user_ui_manager\ui_win_def.h(25): warning:  #92-D: identifier-list parameters may only be used in a function definition
+  LV_FONT_DECLARE(font_16px);
+..\Src\lvgl_user_ui_manager\ui_win_def.h(26): warning:  #77-D: this declaration has no storage class or type specifier
+  LV_FONT_DECLARE(font_18px);
+..\Src\lvgl_user_ui_manager\ui_win_def.h(26): warning:  #92-D: identifier-list parameters may only be used in a function definition
+  LV_FONT_DECLARE(font_18px);
+..\Src\lvgl_user_ui_manager\ui_win_def.h(27): warning:  #77-D: this declaration has no storage class or type specifier
+  LV_FONT_DECLARE(font_20px);
+..\Src\lvgl_user_ui_manager\ui_win_def.h(27): warning:  #92-D: identifier-list parameters may only be used in a function definition
+  LV_FONT_DECLARE(font_20px);
+..\Src\lvgl_user_ui_manager\ui_win_def.h(28): warning:  #77-D: this declaration has no storage class or type specifier
+  LV_FONT_DECLARE(font_24px);
+..\Src\lvgl_user_ui_manager\ui_win_def.h(28): warning:  #92-D: identifier-list parameters may only be used in a function definition
+  LV_FONT_DECLARE(font_24px);
+..\Src\lvgl_user_ui_manager\ui_win_def.h(29): warning:  #77-D: this declaration has no storage class or type specifier
+  LV_FONT_DECLARE(font_26px);
+..\Src\lvgl_user_ui_manager\ui_win_def.h(29): warning:  #92-D: identifier-list parameters may only be used in a function definition
+  LV_FONT_DECLARE(font_26px);
+..\Src\lvgl_user_ui_manager\ui_win_def.h(30): warning:  #77-D: this declaration has no storage class or type specifier
+  LV_FONT_DECLARE(font_30px);
+..\Src\lvgl_user_ui_manager\ui_win_def.h(30): warning:  #92-D: identifier-list parameters may only be used in a function definition
+  LV_FONT_DECLARE(font_30px);
+..\Src\lvgl_user_ui_manager\ui_win_def.h(31): warning:  #77-D: this declaration has no storage class or type specifier
+  LV_FONT_DECLARE(font_36px);
+..\Src\lvgl_user_ui_manager\ui_win_def.h(31): warning:  #92-D: identifier-list parameters may only be used in a function definition
+  LV_FONT_DECLARE(font_36px);
+..\Src\lvgl_user_ui_manager\ui_win_def.h(32): warning:  #77-D: this declaration has no storage class or type specifier
+  LV_FONT_DECLARE(font_48px);
+..\Src\lvgl_user_ui_manager\ui_win_def.h(32): warning:  #92-D: identifier-list parameters may only be used in a function definition
+  LV_FONT_DECLARE(font_48px);
+..\Src\lvgl_user_ui_manager\ui_win_def.h(33): warning:  #77-D: this declaration has no storage class or type specifier
+  LV_FONT_DECLARE(font_62px);
+..\Src\lvgl_user_ui_manager\ui_win_def.h(33): warning:  #92-D: identifier-list parameters may only be used in a function definition
+  LV_FONT_DECLARE(font_62px);
+..\Src\lvgl_user_ui_manager\ui_win_def.h(34): warning:  #77-D: this declaration has no storage class or type specifier
+  LV_FONT_DECLARE(font_72px);
+..\Src\lvgl_user_ui_manager\ui_win_def.h(34): warning:  #92-D: identifier-list parameters may only be used in a function definition
+  LV_FONT_DECLARE(font_72px);
+..\Src\lvgl_user_ui_manager\ui_win_def.h(35): warning:  #77-D: this declaration has no storage class or type specifier
+  LV_FONT_DECLARE(dync_20px_tt);
+..\Src\lvgl_user_ui_manager\ui_win_def.h(35): warning:  #92-D: identifier-list parameters may only be used in a function definition
+  LV_FONT_DECLARE(dync_20px_tt);
+..\Src\lvgl_user_ui_manager\app_ota/app_ota.h(39): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Src\lvgl_user_ui_manager\ui_win_def.c: 25 warnings, 0 errors
+compiling app_cardiogram.c...
+..\Src\lvgl_user_ui_manager\app_cardiogram\app_cardiogram.c(53): warning:  #1295-D: Deprecated declaration cardiogram_anim - give arg types
+  static void cardiogram_anim();
+..\Src\lvgl_user_ui_manager\app_cardiogram\app_cardiogram.c(54): warning:  #1295-D: Deprecated declaration cardiogram_report - give arg types
+  static void cardiogram_report();
+..\Src\lvgl_user_ui_manager\app_cardiogram\app_cardiogram.c(55): warning:  #1295-D: Deprecated declaration cardiogram_explain - give arg types
+  static void cardiogram_explain();
+..\Src\lvgl_user_ui_manager\app_cardiogram\app_cardiogram.c(336): warning:  #117-D: non-void function "cardiogram_measure_anim_create"  should return a value
+              return;
+..\Src\lvgl_user_ui_manager\app_cardiogram\app_cardiogram.c: 4 warnings, 0 errors
+compiling lv_user_task.c...
+..\Src\app\task\lv_user_task.c(166): warning:  #223-D: function "st77916_poweron" declared implicitly
+  					st77916_poweron();
+..\Src\app\task\lv_user_task.c(182): warning:  #223-D: function "st77916_lowpower" declared implicitly
+  				st77916_lowpower();
+..\Src\app\task\lv_user_task.c(208): warning:  #223-D: function "app_resting_start" declared implicitly
+                      app_resting_start();
+..\Src\app\task\lv_user_task.c: 3 warnings, 0 errors
+compiling app_service_task.c...
+..\Src\service\app_service_task.c(304): warning:  #177-D: variable "s_ble_tx_data"  was declared but never referenced
+  	uint8_t s_ble_tx_data[] = {"System on"};
+..\Src\service\app_service_task.c: 1 warning, 0 errors
+compiling app_continuity.c...
+compiling app_resting.c...
+..\Src\lvgl_user_ui_manager\app_resting\app_resting.c(12): warning:  #223-D: function "cookie_obj_create" declared implicitly
+      lv_obj_t* screen = cookie_obj_create(NULL, LV_HOR_RES, LV_VER_RES, LV_DIR_VER);
+..\Src\lvgl_user_ui_manager\app_resting\app_resting.c(12): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* screen = cookie_obj_create(NULL, LV_HOR_RES, LV_VER_RES, LV_DIR_VER);
+..\Src\lvgl_user_ui_manager\app_resting\app_resting.c(15): warning:  #223-D: function "cookie_label_create" declared implicitly
+      lv_obj_t* title_text = cookie_label_create(screen, &font_26px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_resting\app_resting.c(15): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* title_text = cookie_label_create(screen, &font_26px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_resting\app_resting.c(21): warning:  #223-D: function "cookie_roller_create" declared implicitly
+      roller = cookie_roller_create(screen, LV_HOR_RES, 10, 90, 10, value);
+..\Src\lvgl_user_ui_manager\app_resting\app_resting.c(21): warning:  #513-D: a value of type "int" cannot be assigned to an entity of type "lv_obj_t *"
+      roller = cookie_roller_create(screen, LV_HOR_RES, 10, 90, 10, value);
+..\Src\lvgl_user_ui_manager\app_resting\app_resting.c(24): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* sec = cookie_label_create(screen, &font_24px, LV_COLOR_GRAY_WHITE);
+..\Src\lvgl_user_ui_manager\app_resting\app_resting.c(28): warning:  #223-D: function "cookie_img_create" declared implicitly
+      lv_obj_t* confirm = cookie_img_create(screen, &wd_img_app_clock_confirm);
+..\Src\lvgl_user_ui_manager\app_resting\app_resting.c(28): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* confirm = cookie_img_create(screen, &wd_img_app_clock_confirm);
+..\Src\lvgl_user_ui_manager\app_resting\app_resting.c(44): warning:  #223-D: function "cookie_get_roller_data" declared implicitly
+      uint8_t rest_time = cookie_get_roller_data(roller);
+..\Src\lvgl_user_ui_manager\app_resting\app_resting.c: 10 warnings, 0 errors
+compiling app_environment.c...
+..\Src\lvgl_user_ui_manager\app_environment\app_environment.c(34): warning:  #223-D: function "cookie_environment_item_set_data" declared implicitly
+                  cookie_environment_item_set_data(environment_list[0].item, environment_data, 0);
+..\Src\lvgl_user_ui_manager\app_environment\app_environment.c(48): warning:  #223-D: function "cookie_obj_create" declared implicitly
+      lv_obj_t* screen = cookie_obj_create(NULL, LV_HOR_RES, LV_VER_RES, LV_DIR_VER);
+..\Src\lvgl_user_ui_manager\app_environment\app_environment.c(48): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* screen = cookie_obj_create(NULL, LV_HOR_RES, LV_VER_RES, LV_DIR_VER);
+..\Src\lvgl_user_ui_manager\app_environment\app_environment.c(52): warning:  #223-D: function "cookie_img_create" declared implicitly
+      lv_obj_t* bg_img = cookie_img_create(screen, &wd_img_app_env_bg);
+..\Src\lvgl_user_ui_manager\app_environment\app_environment.c(52): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* bg_img = cookie_img_create(screen, &wd_img_app_env_bg);
+..\Src\lvgl_user_ui_manager\app_environment\app_environment.c(60): warning:  #223-D: function "cookie_environment_item_create" declared implicitly
+          environment_list[i].item = cookie_environment_item_create(screen, environment_list[i].image, environment_list[i].unit, environment_data, i);
+..\Src\lvgl_user_ui_manager\app_environment\app_environment.c(60): warning:  #513-D: a value of type "int" cannot be assigned to an entity of type "lv_obj_t *"
+          environment_list[i].item = cookie_environment_item_create(screen, environment_list[i].image, environment_list[i].unit, environment_data, i);
+..\Src\lvgl_user_ui_manager\app_environment\app_environment.c: 7 warnings, 0 errors
+compiling app_hr_bo.c...
+..\Src\lvgl_user_ui_manager\app_hr_bo\app_hr_bo.c(65): warning:  #223-D: function "cookie_obj_create" declared implicitly
+      lv_obj_t* screen = cookie_obj_create(NULL, LV_HOR_RES, LV_VER_RES, LV_DIR_VER);
+..\Src\lvgl_user_ui_manager\app_hr_bo\app_hr_bo.c(65): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* screen = cookie_obj_create(NULL, LV_HOR_RES, LV_VER_RES, LV_DIR_VER);
+..\Src\lvgl_user_ui_manager\app_hr_bo\app_hr_bo.c(69): warning:  #223-D: function "cookie_page_create" declared implicitly
+      page = cookie_page_create(screen);
+..\Src\lvgl_user_ui_manager\app_hr_bo\app_hr_bo.c(69): warning:  #513-D: a value of type "int" cannot be assigned to an entity of type "lv_obj_t *"
+      page = cookie_page_create(screen);
+..\Src\lvgl_user_ui_manager\app_hr_bo\app_hr_bo.c(71): warning:  #223-D: function "cookie_img_create" declared implicitly
+      lv_obj_t* tips_img = cookie_img_create(page, &wd_img_wear_remind);
+..\Src\lvgl_user_ui_manager\app_hr_bo\app_hr_bo.c(71): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* tips_img = cookie_img_create(page, &wd_img_wear_remind);
+..\Src\lvgl_user_ui_manager\app_hr_bo\app_hr_bo.c(76): warning:  #223-D: function "cookie_label_create" declared implicitly
+      lv_obj_t* tips_text = cookie_label_create(page, &font_18px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_hr_bo\app_hr_bo.c(76): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* tips_text = cookie_label_create(page, &font_18px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_hr_bo\app_hr_bo.c(95): warning:  #223-D: function "cookie_img_create" declared implicitly
+      lv_obj_t* hr_img = cookie_img_create(page, &wd_img_hr_icon);
+..\Src\lvgl_user_ui_manager\app_hr_bo\app_hr_bo.c(95): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* hr_img = cookie_img_create(page, &wd_img_hr_icon);
+..\Src\lvgl_user_ui_manager\app_hr_bo\app_hr_bo.c(104): warning:  #68-D: integer conversion resulted in a change of sign
+  	lv_anim_set_repeat_count(&hr_anim,-1);
+..\Src\lvgl_user_ui_manager\app_hr_bo\app_hr_bo.c(107): warning:  #223-D: function "cookie_label_create" declared implicitly
+      hr_data = cookie_label_create(page, &font_72px, LV_COLOR_RED);
+..\Src\lvgl_user_ui_manager\app_hr_bo\app_hr_bo.c(107): warning:  #513-D: a value of type "int" cannot be assigned to an entity of type "lv_obj_t *"
+      hr_data = cookie_label_create(page, &font_72px, LV_COLOR_RED);
+..\Src\lvgl_user_ui_manager\app_hr_bo\app_hr_bo.c(115): warning:  #513-D: a value of type "int" cannot be assigned to an entity of type "lv_obj_t *"
+      hr_unit = cookie_label_create(page, &font_18px, LV_COLOR_GRAY_WHITE);
+..\Src\lvgl_user_ui_manager\app_hr_bo\app_hr_bo.c(119): warning:  #513-D: a value of type "int" cannot be assigned to an entity of type "lv_obj_t *"
+      bo_data = cookie_label_create(page, &font_20px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_hr_bo\app_hr_bo.c(127): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* hr_chart_bg = cookie_img_create(page, &wd_img_hr_lines);
+..\Src\lvgl_user_ui_manager\app_hr_bo\app_hr_bo.c(130): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* hr_max_show = cookie_label_create(page, &font_12px, LV_COLOR_GRAY_WHITE);
+..\Src\lvgl_user_ui_manager\app_hr_bo\app_hr_bo.c(134): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* hr_min_show = cookie_label_create(page, &font_12px, LV_COLOR_GRAY_WHITE);
+..\Src\lvgl_user_ui_manager\app_hr_bo\app_hr_bo.c(138): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* min_00 = cookie_label_create(page, &font_16px, LV_COLOR_GRAY_WHITE);
+..\Src\lvgl_user_ui_manager\app_hr_bo\app_hr_bo.c(142): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* min_30 = cookie_label_create(page, &font_16px, LV_COLOR_GRAY_WHITE);
+..\Src\lvgl_user_ui_manager\app_hr_bo\app_hr_bo.c(146): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* min_60 = cookie_label_create(page, &font_16px, LV_COLOR_GRAY_WHITE);
+..\Src\lvgl_user_ui_manager\app_hr_bo\app_hr_bo.c(150): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* hr_max = cookie_label_create(page, &font_24px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_hr_bo\app_hr_bo.c(154): warning:  #513-D: a value of type "int" cannot be assigned to an entity of type "lv_obj_t *"
+      hr_max_data = cookie_label_create(page, &font_36px, LV_COLOR_RED);
+..\Src\lvgl_user_ui_manager\app_hr_bo\app_hr_bo.c(162): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* hr_min = cookie_label_create(page, &font_24px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_hr_bo\app_hr_bo.c(166): warning:  #513-D: a value of type "int" cannot be assigned to an entity of type "lv_obj_t *"
+      hr_min_data = cookie_label_create(page, &font_36px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_hr_bo\app_hr_bo.c: 25 warnings, 0 errors
+compiling app_reminder.c...
+..\Src\lvgl_user_ui_manager\app_reminder\app_reminder.c(12): warning:  #223-D: function "cookie_obj_create" declared implicitly
+      screen = cookie_obj_create(NULL, LV_HOR_RES, LV_VER_RES, LV_DIR_VER);
+..\Src\lvgl_user_ui_manager\app_reminder\app_reminder.c(12): warning:  #513-D: a value of type "int" cannot be assigned to an entity of type "lv_obj_t *"
+      screen = cookie_obj_create(NULL, LV_HOR_RES, LV_VER_RES, LV_DIR_VER);
+..\Src\lvgl_user_ui_manager\app_reminder\app_reminder.c(23): warning:  #223-D: function "cookie_label_create" declared implicitly
+          lv_obj_t* title_text = cookie_label_create(screen, &font_26px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_reminder\app_reminder.c(23): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+          lv_obj_t* title_text = cookie_label_create(screen, &font_26px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_reminder\app_reminder.c(27): warning:  #223-D: function "cookie_img_create" declared implicitly
+          lv_obj_t* nothing_img = cookie_img_create(screen, &wd_img_app_notice_noMsg);
+..\Src\lvgl_user_ui_manager\app_reminder\app_reminder.c(27): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+          lv_obj_t* nothing_img = cookie_img_create(screen, &wd_img_app_notice_noMsg);
+..\Src\lvgl_user_ui_manager\app_reminder\app_reminder.c(44): warning:  #767-D: conversion from pointer to smaller integer
+      id = (uint16_t)lv_event_get_user_data(e);
+..\Src\lvgl_user_ui_manager\app_reminder\app_reminder.c(64): warning:  #223-D: function "cookie_label_create" declared implicitly
+      lv_obj_t* title_text = cookie_label_create(screen, &font_26px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_reminder\app_reminder.c(64): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* title_text = cookie_label_create(screen, &font_26px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_reminder\app_reminder.c(72): warning:  #223-D: function "cookie_img_create" declared implicitly
+          lv_obj_t* nothing_img = cookie_img_create(screen, &wd_img_app_notice_noMsg);
+..\Src\lvgl_user_ui_manager\app_reminder\app_reminder.c(72): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+          lv_obj_t* nothing_img = cookie_img_create(screen, &wd_img_app_notice_noMsg);
+..\Src\lvgl_user_ui_manager\app_reminder\app_reminder.c(79): warning:  #223-D: function "cookie_reminder_item_create" declared implicitly
+              cookie_reminder_item_create(screen, notice_list->current_notice.text, notice_list->current_notice.overdue, reminder_show_one, notice_list->current_notice.id);
+..\Src\lvgl_user_ui_manager\app_reminder\app_reminder.c(87): warning:  #223-D: function "cookie_img_create" declared implicitly
+          lv_obj_t* delete_img = cookie_img_create(screen, &wd_img_app_clock_delete);
+..\Src\lvgl_user_ui_manager\app_reminder\app_reminder.c(87): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+          lv_obj_t* delete_img = cookie_img_create(screen, &wd_img_app_clock_delete);
+..\Src\lvgl_user_ui_manager\app_reminder\app_reminder.c(97): warning:  #223-D: function "cookie_obj_create" declared implicitly
+                  lv_obj_t* page = cookie_obj_create(screen, 280, 185, LV_DIR_VER);
+..\Src\lvgl_user_ui_manager\app_reminder\app_reminder.c(97): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+                  lv_obj_t* page = cookie_obj_create(screen, 280, 185, LV_DIR_VER);
+..\Src\lvgl_user_ui_manager\app_reminder\app_reminder.c(98): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+                  lv_obj_t* reminder_label = cookie_label_create(page, &dync_20px_tt, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_reminder\app_reminder.c(107): warning:  #223-D: function "cookie_img_create" declared implicitly
+                      lv_obj_t* received = cookie_img_create(screen, &wd_img_app_notice_received);
+..\Src\lvgl_user_ui_manager\app_reminder\app_reminder.c(107): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+                      lv_obj_t* received = cookie_img_create(screen, &wd_img_app_notice_received);
+..\Src\lvgl_user_ui_manager\app_reminder\app_reminder.c(114): warning:  #223-D: function "cookie_img_create" declared implicitly
+                      lv_obj_t* delete_img = cookie_img_create(screen, &wd_img_app_clock_delete);
+..\Src\lvgl_user_ui_manager\app_reminder\app_reminder.c(114): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+                      lv_obj_t* delete_img = cookie_img_create(screen, &wd_img_app_clock_delete);
+..\Src\lvgl_user_ui_manager\app_reminder\app_reminder.c: 21 warnings, 0 errors
+compiling app_shutdown.c...
+..\Src\lvgl_user_ui_manager\app_shutdown\app_shutdown.c(15): warning:  #223-D: function "cookie_obj_create" declared implicitly
+      screen = cookie_obj_create(NULL, LV_HOR_RES, LV_VER_RES, LV_DIR_VER);
+..\Src\lvgl_user_ui_manager\app_shutdown\app_shutdown.c(15): warning:  #513-D: a value of type "int" cannot be assigned to an entity of type "lv_obj_t *"
+      screen = cookie_obj_create(NULL, LV_HOR_RES, LV_VER_RES, LV_DIR_VER);
+..\Src\lvgl_user_ui_manager\app_shutdown\app_shutdown.c(18): warning:  #223-D: function "cookie_label_create" declared implicitly
+      lv_obj_t* tips_text = cookie_label_create(screen, &font_20px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_shutdown\app_shutdown.c(18): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* tips_text = cookie_label_create(screen, &font_20px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_shutdown\app_shutdown.c(23): warning:  #223-D: function "cookie_img_create" declared implicitly
+      lv_obj_t* confirm = cookie_img_create(screen, &wd_img_app_clock_confirm);
+..\Src\lvgl_user_ui_manager\app_shutdown\app_shutdown.c(23): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* confirm = cookie_img_create(screen, &wd_img_app_clock_confirm);
+..\Src\lvgl_user_ui_manager\app_shutdown\app_shutdown.c(28): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* delete = cookie_img_create(screen, &wd_img_app_shutdown_cancel);
+..\Src\lvgl_user_ui_manager\app_shutdown\app_shutdown.c(52): warning:  #223-D: function "app_screen_keep_on" declared implicitly
+          app_screen_keep_on(false);
+..\Src\lvgl_user_ui_manager\app_shutdown\app_shutdown.c(53): warning:  #223-D: function "gui_shutdown_launch" declared implicitly
+          gui_shutdown_launch();
+..\Src\lvgl_user_ui_manager\app_shutdown\app_shutdown.c(61): warning:  #223-D: function "cookie_label_create" declared implicitly
+      countdown_text = cookie_label_create(screen, &font_36px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_shutdown\app_shutdown.c(61): warning:  #513-D: a value of type "int" cannot be assigned to an entity of type "lv_obj_t *"
+      countdown_text = cookie_label_create(screen, &font_36px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_shutdown\app_shutdown.c(80): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* tips_text = cookie_label_create(screen, &font_24px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_shutdown\app_shutdown.c(86): warning:  #223-D: function "app_screen_keep_on" declared implicitly
+      app_screen_keep_on(true);
+..\Src\lvgl_user_ui_manager\app_shutdown\app_shutdown.c(8): warning:  #550-D: variable "timer"  was set but never used
+  static lv_timer_t* timer = NULL;
+..\Src\lvgl_user_ui_manager\app_shutdown\app_shutdown.c: 14 warnings, 0 errors
+compiling app_id_code.c...
+..\Src\lvgl_user_ui_manager\app_id_code\app_id_code.c(10): warning:  #223-D: function "cookie_obj_create" declared implicitly
+      lv_obj_t* screen = cookie_obj_create(NULL, LV_HOR_RES, LV_VER_RES, LV_DIR_VER);
+..\Src\lvgl_user_ui_manager\app_id_code\app_id_code.c(10): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* screen = cookie_obj_create(NULL, LV_HOR_RES, LV_VER_RES, LV_DIR_VER);
+..\Src\lvgl_user_ui_manager\app_id_code\app_id_code.c(16): warning:  #223-D: function "cookie_label_create" declared implicitly
+      lv_obj_t* title_text = cookie_label_create(screen, &font_26px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_id_code\app_id_code.c(16): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* title_text = cookie_label_create(screen, &font_26px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_id_code\app_id_code.c(21): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* mac_text = cookie_label_create(screen, &font_20px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_id_code\app_id_code.c(34): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* tsm_text = cookie_label_create(screen, &font_20px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_id_code\app_id_code.c(39): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* nfc_text = cookie_label_create(screen, &font_20px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_id_code\app_id_code.c(44): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* sn_text = cookie_label_create(screen, &font_20px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_id_code\app_id_code.c: 8 warnings, 0 errors
+compiling app_system_set.c...
+..\Src\lvgl_user_ui_manager\app_system_set\app_system_set.c(35): warning:  #144-D: a value of type "void *" cannot be used to initialize an entity of type "screen_id_e"
+      [SYSTEM_SET_CONTINUITY] = {&wd_img_app_settings_sport_continuity,    "????????????", system_set_item_clicked_cb, (void*)SCREEN_ID_CONTINUITY},
+..\Src\lvgl_user_ui_manager\app_system_set\app_system_set.c(36): warning:  #144-D: a value of type "void *" cannot be used to initialize an entity of type "screen_id_e"
+      [SYSTEM_SET_BRIGHTNESS] = {&wd_img_app_settings_brightness,          "????????????", system_set_item_clicked_cb, (void*)SCREEN_ID_BRIGHTNESS},
+..\Src\lvgl_user_ui_manager\app_system_set\app_system_set.c(37): warning:  #144-D: a value of type "void *" cannot be used to initialize an entity of type "screen_id_e"
+      [SYSTEM_SET_CLOCK_SET]  = {&wd_img_app_settings_alarm,               "????????????", system_set_item_clicked_cb, (void*)SCREEN_ID_CLOCK_SET},
+..\Src\lvgl_user_ui_manager\app_system_set\app_system_set.c(38): warning:  #144-D: a value of type "void *" cannot be used to initialize an entity of type "screen_id_e"
+      [SYSTEM_SET_RESTING]    = {&wd_img_app_settings_screen_shutdowntime, "????????????", system_set_item_clicked_cb, (void*)SCREEN_ID_RESTING},
+..\Src\lvgl_user_ui_manager\app_system_set\app_system_set.c(39): warning:  #144-D: a value of type "void *" cannot be used to initialize an entity of type "screen_id_e"
+      [SYSTEM_SET_ID_CODE]    = {&wd_img_app_settings_IDCard,              "?????????",   system_set_item_clicked_cb, (void*)SCREEN_ID_ID_CODE},
+..\Src\lvgl_user_ui_manager\app_system_set\app_system_set.c(40): warning:  #144-D: a value of type "void *" cannot be used to initialize an entity of type "screen_id_e"
+      [SYSTEM_SET_VERSION]    = {&wd_img_app_settings_upgrade,             "????????????", system_set_item_clicked_cb, (void*)SCREEN_ID_VERSION},
+..\Src\lvgl_user_ui_manager\app_system_set\app_system_set.c(41): warning:  #144-D: a value of type "void *" cannot be used to initialize an entity of type "screen_id_e"
+      [SYSTEM_SET_SHUTDOWN]   = {&wd_img_app_settings_shutdown,            "??????",     system_set_item_clicked_cb, (void*)SCREEN_ID_SHUTDOWN},
+..\Src\lvgl_user_ui_manager\app_system_set\app_system_set.c(48): warning:  #223-D: function "cookie_obj_create" declared implicitly
+      lv_obj_t* screen = cookie_obj_create(NULL, LV_HOR_RES, LV_VER_RES, LV_DIR_VER);
+..\Src\lvgl_user_ui_manager\app_system_set\app_system_set.c(48): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* screen = cookie_obj_create(NULL, LV_HOR_RES, LV_VER_RES, LV_DIR_VER);
+..\Src\lvgl_user_ui_manager\app_system_set\app_system_set.c(51): warning:  #223-D: function "cookie_page_create" declared implicitly
+      page = cookie_page_create(screen);
+..\Src\lvgl_user_ui_manager\app_system_set\app_system_set.c(51): warning:  #513-D: a value of type "int" cannot be assigned to an entity of type "lv_obj_t *"
+      page = cookie_page_create(screen);
+..\Src\lvgl_user_ui_manager\app_system_set\app_system_set.c(58): warning:  #223-D: function "cookie_list_item_create" declared implicitly
+          cookie_list_item_create(page, system_set[item].image, system_set[item].text, system_set[item].event_cb, system_set[item].id);
+..\Src\lvgl_user_ui_manager\app_system_set\app_system_set.c(90): warning:  #767-D: conversion from pointer to smaller integer
+      screen_id_e jump_id = (screen_id_e)lv_event_get_user_data(e);
+..\Src\lvgl_user_ui_manager\app_system_set\app_system_set.c(92): warning:  #1-D: last line of file ends without a newline
+  }
+..\Src\lvgl_user_ui_manager\app_system_set\app_system_set.c: 14 warnings, 0 errors
+compiling app_version.c...
+..\Src\lvgl_user_ui_manager\app_version\app_version.c(24): warning:  #223-D: function "cookie_obj_create" declared implicitly
+      screen = cookie_obj_create(NULL, LV_HOR_RES, LV_VER_RES, LV_DIR_VER);
+..\Src\lvgl_user_ui_manager\app_version\app_version.c(24): warning:  #513-D: a value of type "int" cannot be assigned to an entity of type "lv_obj_t *"
+      screen = cookie_obj_create(NULL, LV_HOR_RES, LV_VER_RES, LV_DIR_VER);
+..\Src\lvgl_user_ui_manager\app_version\app_version.c(57): warning:  #223-D: function "service_sys_reset" declared implicitly
+          service_sys_reset();
+..\Src\lvgl_user_ui_manager\app_version\app_version.c(63): warning:  #223-D: function "service_sys_reset" declared implicitly
+          service_sys_reset();
+..\Src\lvgl_user_ui_manager\app_version\app_version.c(75): warning:  #223-D: function "app_environment_get_power" declared implicitly
+      if(app_environment_get_power() > 50)
+..\Src\lvgl_user_ui_manager\app_version\app_version.c(116): warning:  #223-D: function "cookie_label_create" declared implicitly
+      lv_obj_t* title_text = cookie_label_create(screen, &font_26px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_version\app_version.c(116): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* title_text = cookie_label_create(screen, &font_26px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_version\app_version.c(125): warning:  #223-D: function "cookie_img_create" declared implicitly
+              lv_obj_t* tips_img = cookie_img_create(screen, &wd_img_app_upgrade_icon);
+..\Src\lvgl_user_ui_manager\app_version\app_version.c(125): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+              lv_obj_t* tips_img = cookie_img_create(screen, &wd_img_app_upgrade_icon);
+..\Src\lvgl_user_ui_manager\app_version\app_version.c(134): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+              lv_obj_t* tips_version_text = cookie_label_create(screen, &font_20px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_version\app_version.c(140): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+                  lv_obj_t* tips_text = cookie_label_create(screen, &font_20px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_version\app_version.c(145): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+                  lv_obj_t* tips_text = cookie_label_create(screen, &font_20px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_version\app_version.c(150): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+                  lv_obj_t* upgrade_img = cookie_img_create(screen, &wd_img_app_upgrade_button);
+..\Src\lvgl_user_ui_manager\app_version\app_version.c(176): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+              lv_obj_t* title_text = cookie_label_create(screen, &font_26px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_version\app_version.c(181): warning:  #513-D: a value of type "int" cannot be assigned to an entity of type "lv_obj_t *"
+              countdown_text = cookie_label_create(screen, &font_20px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_version\app_version.c(194): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+              lv_obj_t* eletricity = cookie_label_create(screen, &font_20px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_version\app_version.c(202): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+              lv_obj_t* confirm_label = cookie_label_create(screen, &font_20px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_version\app_version.c(206): warning:  #223-D: function "cookie_img_create" declared implicitly
+              lv_obj_t* confirm = cookie_img_create(screen, &wd_img_app_ecg_confirm);
+..\Src\lvgl_user_ui_manager\app_version\app_version.c(206): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+              lv_obj_t* confirm = cookie_img_create(screen, &wd_img_app_ecg_confirm);
+..\Src\lvgl_user_ui_manager\app_version\app_version.c(217): warning:  #1-D: last line of file ends without a newline
+  }
+..\Src\lvgl_user_ui_manager\app_version\app_version.c(49): warning:  #177-D: variable "Cookie"  was declared but never referenced
+  static uint8_t Cookie = 0;
+..\Src\lvgl_user_ui_manager\app_version\app_version.c: 21 warnings, 0 errors
+compiling app_sos.c...
+compiling app_notifi_center.c...
+..\Src\lvgl_user_ui_manager\app_watchface\app_notifi_center.h(25): warning:  #1-D: last line of file ends without a newline
+  #endif //__UI_NOTIFICATION_CENTER_H__
+..\Src\lvgl_user_ui_manager\app_watchface\app_notifi_center.c(32): warning:  #167-D: argument of type "void (*)(void *, uint32_t)" is incompatible with parameter of type "lv_anim_exec_xcb_t"
+      lv_anim_set_exec_cb(&a, screen_slider_anim_cb);
+..\Src\lvgl_user_ui_manager\app_watchface\app_notifi_center.c(47): warning:  #223-D: function "cookie_label_create" declared implicitly
+      lv_label_t *ts_label = cookie_label_create(p_notifi_center, &font_18px, lv_color_make(204, 204, 204));
+..\Src\lvgl_user_ui_manager\app_watchface\app_notifi_center.c(47): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_label_t *"
+      lv_label_t *ts_label = cookie_label_create(p_notifi_center, &font_18px, lv_color_make(204, 204, 204));
+..\Src\lvgl_user_ui_manager\app_watchface\app_notifi_center.c(48): warning:  #167-D: argument of type "lv_label_t *" is incompatible with parameter of type "lv_obj_t *"
+      lv_label_set_text_fmt(ts_label, "%02u:%02u", time.hour, time.min);
+..\Src\lvgl_user_ui_manager\app_watchface\app_notifi_center.c(49): warning:  #167-D: argument of type "lv_label_t *" is incompatible with parameter of type "struct _lv_obj_t *"
+      lv_obj_set_width(ts_label, 200);
+..\Src\lvgl_user_ui_manager\app_watchface\app_notifi_center.c(50): warning:  #167-D: argument of type "lv_label_t *" is incompatible with parameter of type "struct _lv_obj_t *"
+      lv_obj_align(ts_label, LV_ALIGN_TOP_MID, 0, 12);
+..\Src\lvgl_user_ui_manager\app_watchface\app_notifi_center.c(81): warning:  #223-D: function "cookie_img_create" declared implicitly
+                  lv_obj_t *noMsgIcon = cookie_img_create(p_notifi_center, &wd_img_app_notice_noMsg);
+..\Src\lvgl_user_ui_manager\app_watchface\app_notifi_center.c(81): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+                  lv_obj_t *noMsgIcon = cookie_img_create(p_notifi_center, &wd_img_app_notice_noMsg);
+..\Src\lvgl_user_ui_manager\app_watchface\app_notifi_center.c(83): warning:  #223-D: function "cookie_label_create" declared implicitly
+                  lv_label_t *ts_label = cookie_label_create(p_notifi_center, &font_18px, lv_color_make(204, 204, 204));
+..\Src\lvgl_user_ui_manager\app_watchface\app_notifi_center.c(83): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_label_t *"
+                  lv_label_t *ts_label = cookie_label_create(p_notifi_center, &font_18px, lv_color_make(204, 204, 204));
+..\Src\lvgl_user_ui_manager\app_watchface\app_notifi_center.c(84): warning:  #167-D: argument of type "lv_label_t *" is incompatible with parameter of type "lv_obj_t *"
+                  lv_label_set_text_fmt(ts_label, "%02u:%02u", time.hour, time.min);
+..\Src\lvgl_user_ui_manager\app_watchface\app_notifi_center.c(88): warning:  #223-D: function "cookie_label_create" declared implicitly
+                  lv_label_t *notice_label1 = cookie_label_create(p_notifi_center, &dync_20px_tt, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_watchface\app_notifi_center.c(88): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_label_t *"
+                  lv_label_t *notice_label1 = cookie_label_create(p_notifi_center, &dync_20px_tt, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_watchface\app_notifi_center.c(89): warning:  #167-D: argument of type "lv_label_t *" is incompatible with parameter of type "lv_obj_t *"
+                  lv_label_set_text(notice_label1, msg.text);
+..\Src\lvgl_user_ui_manager\app_watchface\app_notifi_center.c(90): warning:  #167-D: argument of type "lv_label_t *" is incompatible with parameter of type "struct _lv_obj_t *"
+                  lv_obj_set_width(notice_label1, 200);
+..\Src\lvgl_user_ui_manager\app_watchface\app_notifi_center.c(91): warning:  #167-D: argument of type "lv_label_t *" is incompatible with parameter of type "struct _lv_obj_t *"
+                  lv_obj_center(notice_label1);
+..\Src\lvgl_user_ui_manager\app_watchface\app_notifi_center.c(92): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_label_t *"
+                  lv_label_t *ts_label = cookie_label_create(p_notifi_center, &font_18px, lv_color_make(204, 204, 204));
+..\Src\lvgl_user_ui_manager\app_watchface\app_notifi_center.c(93): warning:  #167-D: argument of type "lv_label_t *" is incompatible with parameter of type "lv_obj_t *"
+                  lv_label_set_text_fmt(ts_label, "%02u:%02u", msg.notice_time.hour, msg.notice_time.min);
+..\Src\lvgl_user_ui_manager\app_watchface\app_notifi_center.c(57): warning:  #177-D: variable "dir"  was declared but never referenced
+      lv_dir_t dir = 0;
+..\Src\lvgl_user_ui_manager\app_watchface\app_notifi_center.c(151): warning:  #1-D: last line of file ends without a newline
+  }
+..\Src\lvgl_user_ui_manager\app_watchface\app_notifi_center.c(151): warning:  #940-D: missing return statement at end of non-void function "cookie_create_notifi_center" 
+  }
+..\Src\lvgl_user_ui_manager\app_watchface\app_notifi_center.c(8): warning:  #177-D: variable "start_x"  was declared but never referenced
+  static lv_coord_t start_x;
+..\Src\lvgl_user_ui_manager\app_watchface\app_notifi_center.c: 23 warnings, 0 errors
+compiling app_sport.c...
+..\Src\lvgl_user_ui_manager\app_sport\app_sport.c(37): warning:  #223-D: function "cookie_sport_item_set_data" declared implicitly
+                  cookie_sport_item_set_data(sport_list[0].item, sport_data.step);
+..\Src\lvgl_user_ui_manager\app_sport\app_sport.c(51): warning:  #223-D: function "cookie_obj_create" declared implicitly
+      lv_obj_t* screen = cookie_obj_create(NULL, LV_HOR_RES, LV_VER_RES, LV_DIR_VER);
+..\Src\lvgl_user_ui_manager\app_sport\app_sport.c(51): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* screen = cookie_obj_create(NULL, LV_HOR_RES, LV_VER_RES, LV_DIR_VER);
+..\Src\lvgl_user_ui_manager\app_sport\app_sport.c(57): warning:  #223-D: function "cookie_label_create" declared implicitly
+      lv_obj_t* title_text = cookie_label_create(screen, &font_26px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_sport\app_sport.c(57): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* title_text = cookie_label_create(screen, &font_26px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_sport\app_sport.c(70): warning:  #223-D: function "cookie_sport_item_create" declared implicitly
+          sport_list[i].item = cookie_sport_item_create(screen, sport_list[i].image, sport_list[i].name, sport_list[i].unit, sport_list[i].data);
+..\Src\lvgl_user_ui_manager\app_sport\app_sport.c(70): warning:  #513-D: a value of type "int" cannot be assigned to an entity of type "lv_obj_t *"
+          sport_list[i].item = cookie_sport_item_create(screen, sport_list[i].image, sport_list[i].name, sport_list[i].unit, sport_list[i].data);
+..\Src\lvgl_user_ui_manager\app_sport\app_sport.c: 7 warnings, 0 errors
+compiling ui_win_message.c...
+..\Src\lvgl_user_ui_manager\ui_win_message.c(6): warning:  #47-D: incompatible redefinition of macro "APP_LOG_TAG"  (declared at line 74 of "..\..\..\..\..\components\libraries\app_log\app_log.h")
+  #define APP_LOG_TAG "ui"
+..\Src\lvgl_user_ui_manager\ui_win_message.c: 1 warning, 0 errors
+compiling app_alarm.c...
+..\Src\lvgl_user_ui_manager\app_alarm\app_alarm.c(14): warning:  #1295-D: Deprecated declaration alarm_show_create - give arg types
+  static void alarm_show_create();
+..\Src\lvgl_user_ui_manager\app_alarm\app_alarm.c(15): warning:  #1295-D: Deprecated declaration alarm_set_time_create - give arg types
+  static void alarm_set_time_create();
+..\Src\lvgl_user_ui_manager\app_alarm\app_alarm.c(16): warning:  #1295-D: Deprecated declaration alarm_set_repeat_create - give arg types
+  static void alarm_set_repeat_create();
+..\Src\lvgl_user_ui_manager\app_alarm\app_alarm.c(20): warning:  #223-D: function "cookie_obj_create" declared implicitly
+      screen = cookie_obj_create(NULL, LV_HOR_RES, LV_VER_RES, LV_DIR_VER);
+..\Src\lvgl_user_ui_manager\app_alarm\app_alarm.c(20): warning:  #513-D: a value of type "int" cannot be assigned to an entity of type "lv_obj_t *"
+      screen = cookie_obj_create(NULL, LV_HOR_RES, LV_VER_RES, LV_DIR_VER);
+..\Src\lvgl_user_ui_manager\app_alarm\app_alarm.c(37): warning:  #223-D: function "cookie_label_create" declared implicitly
+      lv_obj_t* title_text = cookie_label_create(screen, &font_26px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_alarm\app_alarm.c(37): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* title_text = cookie_label_create(screen, &font_26px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_alarm\app_alarm.c(46): warning:  #223-D: function "cookie_img_create" declared implicitly
+          lv_obj_t* nothing_img = cookie_img_create(screen, &wd_img_app_clock_noalarm);
+..\Src\lvgl_user_ui_manager\app_alarm\app_alarm.c(46): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+          lv_obj_t* nothing_img = cookie_img_create(screen, &wd_img_app_clock_noalarm);
+..\Src\lvgl_user_ui_manager\app_alarm\app_alarm.c(50): warning:  #223-D: function "cookie_alarm_item_create" declared implicitly
+              lv_obj_t* item = cookie_alarm_item_create(screen, clock_list.list[i].min, clock_list.list[i].hour, clock_list.list[i].repeat);
+..\Src\lvgl_user_ui_manager\app_alarm\app_alarm.c(50): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+              lv_obj_t* item = cookie_alarm_item_create(screen, clock_list.list[i].min, clock_list.list[i].hour, clock_list.list[i].repeat);
+..\Src\lvgl_user_ui_manager\app_alarm\app_alarm.c(79): warning:  #223-D: function "cookie_img_create" declared implicitly
+          lv_obj_t* delete_img = cookie_img_create(screen, &wd_img_app_clock_delete);
+..\Src\lvgl_user_ui_manager\app_alarm\app_alarm.c(79): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+          lv_obj_t* delete_img = cookie_img_create(screen, &wd_img_app_clock_delete);
+..\Src\lvgl_user_ui_manager\app_alarm\app_alarm.c(86): warning:  #223-D: function "cookie_img_create" declared implicitly
+          lv_obj_t* add_img = cookie_img_create(screen, &wd_img_app_clock_add);
+..\Src\lvgl_user_ui_manager\app_alarm\app_alarm.c(86): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+          lv_obj_t* add_img = cookie_img_create(screen, &wd_img_app_clock_add);
+..\Src\lvgl_user_ui_manager\app_alarm\app_alarm.c(105): warning:  #223-D: function "cookie_label_create" declared implicitly
+      lv_obj_t* title_text = cookie_label_create(screen, &font_26px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_alarm\app_alarm.c(105): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* title_text = cookie_label_create(screen, &font_26px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_alarm\app_alarm.c(113): warning:  #223-D: function "cookie_roller_create" declared implicitly
+      roller_h = cookie_roller_create(screen, 174, 0, 23, 1, current_time.hour);
+..\Src\lvgl_user_ui_manager\app_alarm\app_alarm.c(113): warning:  #513-D: a value of type "int" cannot be assigned to an entity of type "lv_obj_t *"
+      roller_h = cookie_roller_create(screen, 174, 0, 23, 1, current_time.hour);
+..\Src\lvgl_user_ui_manager\app_alarm\app_alarm.c(116): warning:  #513-D: a value of type "int" cannot be assigned to an entity of type "lv_obj_t *"
+      roller_m = cookie_roller_create(screen, 174, 0, 59, 1, current_time.min);
+..\Src\lvgl_user_ui_manager\app_alarm\app_alarm.c(119): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* dot_1 = cookie_label_create(screen, &font_30px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_alarm\app_alarm.c(123): warning:  #223-D: function "cookie_img_create" declared implicitly
+      lv_obj_t* confirm = cookie_img_create(screen, &wd_img_app_clock_confirm);
+..\Src\lvgl_user_ui_manager\app_alarm\app_alarm.c(123): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* confirm = cookie_img_create(screen, &wd_img_app_clock_confirm);
+..\Src\lvgl_user_ui_manager\app_alarm\app_alarm.c(160): warning:  #223-D: function "cookie_label_create" declared implicitly
+      lv_obj_t* title_text = cookie_label_create(screen, &font_26px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_alarm\app_alarm.c(160): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* title_text = cookie_label_create(screen, &font_26px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_alarm\app_alarm.c(165): warning:  #223-D: function "cookie_obj_create" declared implicitly
+      lv_obj_t* item_once = cookie_obj_create(screen, 300, 60, LV_DIR_NONE);
+..\Src\lvgl_user_ui_manager\app_alarm\app_alarm.c(165): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* item_once = cookie_obj_create(screen, 300, 60, LV_DIR_NONE);
+..\Src\lvgl_user_ui_manager\app_alarm\app_alarm.c(171): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* once_label = cookie_label_create(item_once, &font_20px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_alarm\app_alarm.c(175): warning:  #223-D: function "cookie_img_create" declared implicitly
+      once_confirm = cookie_img_create(item_once, &wd_img_app_clock_unselected);
+..\Src\lvgl_user_ui_manager\app_alarm\app_alarm.c(175): warning:  #513-D: a value of type "int" cannot be assigned to an entity of type "lv_obj_t *"
+      once_confirm = cookie_img_create(item_once, &wd_img_app_clock_unselected);
+..\Src\lvgl_user_ui_manager\app_alarm\app_alarm.c(178): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* item_repeat = cookie_obj_create(screen, 300, 60, LV_DIR_NONE);
+..\Src\lvgl_user_ui_manager\app_alarm\app_alarm.c(184): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* repeat_label = cookie_label_create(item_repeat, &font_20px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_alarm\app_alarm.c(188): warning:  #513-D: a value of type "int" cannot be assigned to an entity of type "lv_obj_t *"
+      repeat_confirm = cookie_img_create(item_repeat, &wd_img_app_clock_unselected);
+..\Src\lvgl_user_ui_manager\app_alarm\app_alarm.c(191): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* confirm = cookie_img_create(screen, &wd_img_app_clock_confirm);
+..\Src\lvgl_user_ui_manager\app_alarm\app_alarm.c(201): warning:  #223-D: function "cookie_get_roller_data" declared implicitly
+      alarm_set.hour = cookie_get_roller_data(roller_h);
+..\Src\lvgl_user_ui_manager\app_alarm\app_alarm.c: 35 warnings, 0 errors
+compiling app_stopwatch.c...
+..\Src\lvgl_user_ui_manager\app_stopwatch\app_stopwatch.c(21): warning:  #223-D: function "cookie_obj_create" declared implicitly
+      lv_obj_t* screen = cookie_obj_create(NULL, LV_HOR_RES, LV_VER_RES, LV_DIR_VER);
+..\Src\lvgl_user_ui_manager\app_stopwatch\app_stopwatch.c(21): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* screen = cookie_obj_create(NULL, LV_HOR_RES, LV_VER_RES, LV_DIR_VER);
+..\Src\lvgl_user_ui_manager\app_stopwatch\app_stopwatch.c(24): warning:  #223-D: function "cookie_label_create" declared implicitly
+      lv_obj_t* title_text = cookie_label_create(screen, &font_26px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_stopwatch\app_stopwatch.c(24): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* title_text = cookie_label_create(screen, &font_26px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_stopwatch\app_stopwatch.c(29): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* dot_1 = cookie_label_create(screen, &font_30px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_stopwatch\app_stopwatch.c(33): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* dot_2 = cookie_label_create(screen, &font_30px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_stopwatch\app_stopwatch.c(37): warning:  #513-D: a value of type "int" cannot be assigned to an entity of type "lv_obj_t *"
+      stopwatch_m = cookie_label_create(screen, &font_48px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_stopwatch\app_stopwatch.c(41): warning:  #513-D: a value of type "int" cannot be assigned to an entity of type "lv_obj_t *"
+      stopwatch_s = cookie_label_create(screen, &font_48px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_stopwatch\app_stopwatch.c(45): warning:  #513-D: a value of type "int" cannot be assigned to an entity of type "lv_obj_t *"
+      stopwatch_ms = cookie_label_create(screen, &font_48px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_stopwatch\app_stopwatch.c(49): warning:  #223-D: function "cookie_img_create" declared implicitly
+      lv_obj_t* stopwatch_reset = cookie_img_create(screen, &wd_img_app_clock_reset);
+..\Src\lvgl_user_ui_manager\app_stopwatch\app_stopwatch.c(49): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* stopwatch_reset = cookie_img_create(screen, &wd_img_app_clock_reset);
+..\Src\lvgl_user_ui_manager\app_stopwatch\app_stopwatch.c(55): warning:  #513-D: a value of type "int" cannot be assigned to an entity of type "lv_obj_t *"
+      stopwatch_control = cookie_img_create(screen, &wd_img_app_clock_play);
+..\Src\lvgl_user_ui_manager\app_stopwatch\app_stopwatch.c(75): warning:  #223-D: function "app_screen_keep_on" declared implicitly
+      app_screen_keep_on(true);
+..\Src\lvgl_user_ui_manager\app_stopwatch\app_stopwatch.c(101): warning:  #223-D: function "app_screen_keep_on" declared implicitly
+      app_screen_keep_on(false);
+..\Src\lvgl_user_ui_manager\app_stopwatch\app_stopwatch.c: 14 warnings, 0 errors
+compiling app_msg.c...
+..\Src\lvgl_user_ui_manager\app_msg\app_msg.c(4): warning:  #47-D: incompatible redefinition of macro "APP_LOG_TAG"  (declared at line 74 of "..\..\..\..\..\components\libraries\app_log\app_log.h")
+  #define APP_LOG_TAG "ui"
+..\Src\lvgl_user_ui_manager\app_msg\app_msg.c(19): warning:  #223-D: function "cookie_img_create" declared implicitly
+      lv_obj_t* img_alarm = cookie_img_create(screen, &wd_img_app_msg_alarm_icon);
+..\Src\lvgl_user_ui_manager\app_msg\app_msg.c(19): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* img_alarm = cookie_img_create(screen, &wd_img_app_msg_alarm_icon);
+..\Src\lvgl_user_ui_manager\app_msg\app_msg.c(22): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* img_close_btn = cookie_img_create(screen, &wd_img_app_msg_alarm_close);
+..\Src\lvgl_user_ui_manager\app_msg\app_msg.c(31): warning:  #223-D: function "cookie_img_create" declared implicitly
+      lv_obj_t* img_close_btn = cookie_img_create(screen, &wd_img_app_notice_received);
+..\Src\lvgl_user_ui_manager\app_msg\app_msg.c(31): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* img_close_btn = cookie_img_create(screen, &wd_img_app_notice_received);
+..\Src\lvgl_user_ui_manager\app_msg\app_msg.c(37): warning:  #223-D: function "cookie_label_create" declared implicitly
+      lv_obj_t* title_text = cookie_label_create(screen, &font_26px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_msg\app_msg.c(37): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* title_text = cookie_label_create(screen, &font_26px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_msg\app_msg.c(46): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_label_t *"
+          lv_label_t *notice_label1 = cookie_label_create(screen, &dync_20px_tt, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_msg\app_msg.c(47): warning:  #167-D: argument of type "lv_label_t *" is incompatible with parameter of type "lv_obj_t *"
+          lv_label_set_text(notice_label1, msg.text);
+..\Src\lvgl_user_ui_manager\app_msg\app_msg.c(48): warning:  #167-D: argument of type "lv_label_t *" is incompatible with parameter of type "struct _lv_obj_t *"
+          lv_obj_set_size(notice_label1, 200, LV_SIZE_CONTENT);
+..\Src\lvgl_user_ui_manager\app_msg\app_msg.c(49): warning:  #167-D: argument of type "lv_label_t *" is incompatible with parameter of type "lv_obj_t *"
+          lv_label_set_long_mode(notice_label1, LV_LABEL_LONG_WRAP);
+..\Src\lvgl_user_ui_manager\app_msg\app_msg.c(50): warning:  #167-D: argument of type "lv_label_t *" is incompatible with parameter of type "struct _lv_obj_t *"
+          lv_obj_center(notice_label1);
+..\Src\lvgl_user_ui_manager\app_msg\app_msg.c(51): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_label_t *"
+          lv_label_t *ts_label = cookie_label_create(screen, &font_18px, lv_color_make(204, 204, 204));
+..\Src\lvgl_user_ui_manager\app_msg\app_msg.c(52): warning:  #167-D: argument of type "lv_label_t *" is incompatible with parameter of type "lv_obj_t *"
+          lv_label_set_text_fmt(ts_label, "%02u:%02u", msg.notice_time.hour, msg.notice_time.min);
+..\Src\lvgl_user_ui_manager\app_msg\app_msg.c(58): warning:  #223-D: function "cookie_label_create" declared implicitly
+      lv_obj_t* title_text = cookie_label_create(screen, &font_26px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_msg\app_msg.c(58): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* title_text = cookie_label_create(screen, &font_26px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_msg\app_msg.c(70): warning:  #223-D: function "cookie_img_create" declared implicitly
+          lv_obj_t *noMsgIcon = cookie_img_create(screen, &wd_img_app_notice_noMsg);
+..\Src\lvgl_user_ui_manager\app_msg\app_msg.c(70): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+          lv_obj_t *noMsgIcon = cookie_img_create(screen, &wd_img_app_notice_noMsg);
+..\Src\lvgl_user_ui_manager\app_msg\app_msg.c(72): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_label_t *"
+          lv_label_t *ts_label = cookie_label_create(screen, &font_18px, lv_color_make(204, 204, 204));
+..\Src\lvgl_user_ui_manager\app_msg\app_msg.c(73): warning:  #167-D: argument of type "lv_label_t *" is incompatible with parameter of type "lv_obj_t *"
+          lv_label_set_text_fmt(ts_label, "%02u:%02u", time.hour, time.min);
+..\Src\lvgl_user_ui_manager\app_msg\app_msg.c(77): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_label_t *"
+          lv_label_t *notice_label1 = cookie_label_create(screen, &dync_20px_tt, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_msg\app_msg.c(78): warning:  #167-D: argument of type "lv_label_t *" is incompatible with parameter of type "lv_obj_t *"
+          lv_label_set_text(notice_label1, msg.text);
+..\Src\lvgl_user_ui_manager\app_msg\app_msg.c(80): warning:  #167-D: argument of type "lv_label_t *" is incompatible with parameter of type "struct _lv_obj_t *"
+          lv_obj_set_size(notice_label1, 200, LV_SIZE_CONTENT);
+..\Src\lvgl_user_ui_manager\app_msg\app_msg.c(81): warning:  #167-D: argument of type "lv_label_t *" is incompatible with parameter of type "lv_obj_t *"
+          lv_label_set_long_mode(notice_label1, LV_LABEL_LONG_WRAP);
+..\Src\lvgl_user_ui_manager\app_msg\app_msg.c(82): warning:  #167-D: argument of type "lv_label_t *" is incompatible with parameter of type "struct _lv_obj_t *"
+          lv_obj_center(notice_label1);
+..\Src\lvgl_user_ui_manager\app_msg\app_msg.c(83): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_label_t *"
+          lv_label_t *ts_label = cookie_label_create(screen, &font_18px, lv_color_make(204, 204, 204));
+..\Src\lvgl_user_ui_manager\app_msg\app_msg.c(84): warning:  #167-D: argument of type "lv_label_t *" is incompatible with parameter of type "lv_obj_t *"
+          lv_label_set_text_fmt(ts_label, "%02u:%02u", msg.notice_time.hour, msg.notice_time.min);
+..\Src\lvgl_user_ui_manager\app_msg\app_msg.c(86): warning:  #223-D: function "cookie_img_create" declared implicitly
+          lv_obj_t* img_close_btn = cookie_img_create(screen, &wd_img_app_notice_received);
+..\Src\lvgl_user_ui_manager\app_msg\app_msg.c(86): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+          lv_obj_t* img_close_btn = cookie_img_create(screen, &wd_img_app_notice_received);
+..\Src\lvgl_user_ui_manager\app_msg\app_msg.c(96): warning:  #223-D: function "cookie_obj_create" declared implicitly
+      lv_obj_t* screen = cookie_obj_create(NULL, LV_HOR_RES, LV_VER_RES, LV_DIR_VER);
+..\Src\lvgl_user_ui_manager\app_msg\app_msg.c(96): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* screen = cookie_obj_create(NULL, LV_HOR_RES, LV_VER_RES, LV_DIR_VER);
+..\Src\lvgl_user_ui_manager\app_msg\app_msg.c(142): warning:  #767-D: conversion from pointer to smaller integer
+          GUI_EVENT event_type = (GUI_EVENT)lv_event_get_user_data(e);
+..\Src\lvgl_user_ui_manager\app_msg\app_msg.c(168): warning:  #223-D: function "app_graphics_mem_malloc" declared implicitly
+      snap_buf = app_graphics_mem_malloc(snap_buf_size);
+..\Src\lvgl_user_ui_manager\app_msg\app_msg.c(168): warning:  #513-D: a value of type "int" cannot be assigned to an entity of type "lv_obj_t *"
+      snap_buf = app_graphics_mem_malloc(snap_buf_size);
+..\Src\lvgl_user_ui_manager\app_msg\app_msg.c(179): warning:  #223-D: function "app_graphics_mem_free" declared implicitly
+          app_graphics_mem_free(snap_buf);
+..\Src\lvgl_user_ui_manager\app_msg\app_msg.c: 36 warnings, 0 errors
+compiling app_time.c...
+..\Src\lvgl_user_ui_manager\app_time\app_time.c(13): warning:  #223-D: function "cookie_obj_create" declared implicitly
+      lv_obj_t* screen = cookie_obj_create(NULL, LV_HOR_RES, LV_VER_RES, LV_DIR_VER);
+..\Src\lvgl_user_ui_manager\app_time\app_time.c(13): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* screen = cookie_obj_create(NULL, LV_HOR_RES, LV_VER_RES, LV_DIR_VER);
+..\Src\lvgl_user_ui_manager\app_time\app_time.c(16): warning:  #223-D: function "cookie_label_create" declared implicitly
+      lv_obj_t* title_text = cookie_label_create(screen, &font_26px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_time\app_time.c(16): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* title_text = cookie_label_create(screen, &font_26px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_time\app_time.c(24): warning:  #223-D: function "cookie_roller_create" declared implicitly
+      roller_h = cookie_roller_create(screen, 100, 0, 23, 1, current_time.hour);
+..\Src\lvgl_user_ui_manager\app_time\app_time.c(24): warning:  #513-D: a value of type "int" cannot be assigned to an entity of type "lv_obj_t *"
+      roller_h = cookie_roller_create(screen, 100, 0, 23, 1, current_time.hour);
+..\Src\lvgl_user_ui_manager\app_time\app_time.c(27): warning:  #513-D: a value of type "int" cannot be assigned to an entity of type "lv_obj_t *"
+      roller_m = cookie_roller_create(screen, 100, 0, 59, 1, current_time.min);
+..\Src\lvgl_user_ui_manager\app_time\app_time.c(30): warning:  #513-D: a value of type "int" cannot be assigned to an entity of type "lv_obj_t *"
+      roller_s = cookie_roller_create(screen, 100, 0, 59, 1, current_time.sec);
+..\Src\lvgl_user_ui_manager\app_time\app_time.c(33): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* dot_1 = cookie_label_create(screen, &font_30px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_time\app_time.c(37): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* dot_2 = cookie_label_create(screen, &font_30px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_time\app_time.c(41): warning:  #223-D: function "cookie_img_create" declared implicitly
+      lv_obj_t* confirm = cookie_img_create(screen, &wd_img_app_clock_confirm);
+..\Src\lvgl_user_ui_manager\app_time\app_time.c(41): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* confirm = cookie_img_create(screen, &wd_img_app_clock_confirm);
+..\Src\lvgl_user_ui_manager\app_time\app_time.c(59): warning:  #223-D: function "cookie_get_roller_data" declared implicitly
+      uint8_t h = cookie_get_roller_data(roller_h);
+..\Src\lvgl_user_ui_manager\app_time\app_time.c: 13 warnings, 0 errors
+compiling app_ota.c...
+..\Src\lvgl_user_ui_manager\app_ota\app_ota.h(39): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Src\lvgl_user_ui_manager\app_ota\app_ota.c(15): warning:  #223-D: function "app_screen_keep_on" declared implicitly
+  	app_screen_keep_on(false);
+..\Src\lvgl_user_ui_manager\app_ota\app_ota.c(16): warning:  #223-D: function "service_sys_reset" declared implicitly
+      service_sys_reset();
+..\Src\lvgl_user_ui_manager\app_ota\app_ota.c(26): warning:  #223-D: function "cookie_obj_create" declared implicitly
+      lv_obj_t* screen = cookie_obj_create(NULL, LV_HOR_RES, LV_VER_RES, LV_DIR_VER);
+..\Src\lvgl_user_ui_manager\app_ota\app_ota.c(26): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* screen = cookie_obj_create(NULL, LV_HOR_RES, LV_VER_RES, LV_DIR_VER);
+..\Src\lvgl_user_ui_manager\app_ota\app_ota.c(48): warning:  #223-D: function "cookie_label_create" declared implicitly
+      lv_obj_t* title_text = cookie_label_create(screen, &font_26px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_ota\app_ota.c(48): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* title_text = cookie_label_create(screen, &font_26px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_ota\app_ota.c(53): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+      lv_obj_t* countdown_text = cookie_label_create(screen, &font_20px, LV_COLOR_WHITE);
+..\Src\lvgl_user_ui_manager\app_ota\app_ota.c(67): warning:  #223-D: function "app_screen_keep_on" declared implicitly
+  	app_screen_keep_on(true);
+..\Src\lvgl_user_ui_manager\app_ota\app_ota.c: 9 warnings, 0 errors
+compiling app_debug.c...
+..\Src\lvgl_user_ui_manager\app_debug\app_debug.c(70): warning:  #144-D: a value of type "unsigned int" cannot be used to initialize an entity of type "uint32_t *"
+      uint32_t *p = 0x88888888;
+..\Src\lvgl_user_ui_manager\app_debug\app_debug.c(70): warning:  #152-D: conversion of nonzero integer to pointer
+      uint32_t *p = 0x88888888;
+..\Src\lvgl_user_ui_manager\app_debug\app_debug.c: 2 warnings, 0 errors
+compiling gh_demo_protocol.c...
+compiling app_applist.c...
+..\Src\lvgl_user_ui_manager\app_applist\app_applist.c(47): warning:  #144-D: a value of type "void *" cannot be used to initialize an entity of type "screen_id_e"
+      [APPLIST_EMOTIONAL]     = {&wd_img_applist_emotion_icon,         "????????????", applist_item_body_clicked_cb, (void*)EMOTIONAL},
+..\Src\lvgl_user_ui_manager\app_applist\app_applist.c(48): warning:  #144-D: a value of type "void *" cannot be used to initialize an entity of type "screen_id_e"
+      [APPLIST_VISUAL]        = {&wd_img_applist_vision_icon,          "????????????", applist_item_body_clicked_cb, (void*)VISUAL},
+..\Src\lvgl_user_ui_manager\app_applist\app_applist.c(49): warning:  #144-D: a value of type "void *" cannot be used to initialize an entity of type "screen_id_e"
+      [APPLIST_MENTAL]        = {&wd_img_applist_mental_icon,          "????????????", applist_item_body_clicked_cb, (void*)MENTAL},
+..\Src\lvgl_user_ui_manager\app_applist\app_applist.c(50): warning:  #144-D: a value of type "void *" cannot be used to initialize an entity of type "screen_id_e"
+      [APPLIST_ENERGY]        = {&wd_img_applist_energy_icon,          "????????????", applist_item_body_clicked_cb, (void*)ENERGY},
+..\Src\lvgl_user_ui_manager\app_applist\app_applist.c(51): warning:  #144-D: a value of type "void *" cannot be used to initialize an entity of type "screen_id_e"
+      [APPLIST_PSYCHOLOGICAL] = {&wd_img_applist_psychology_icon,      "????????????", applist_item_body_clicked_cb, (void*)PSYCHOLOGICAL},
+..\Src\lvgl_user_ui_manager\app_applist\app_applist.c(52): warning:  #144-D: a value of type "void *" cannot be used to initialize an entity of type "screen_id_e"
+      [APPLIST_HR_BO]         = {&wd_img_applist_physiological_icon,   "????????????", applist_item_clicked_cb,      (void*)SCREEN_ID_HR_BO},
+..\Src\lvgl_user_ui_manager\app_applist\app_applist.c(53): warning:  #144-D: a value of type "void *" cannot be used to initialize an entity of type "screen_id_e"
+      [APPLIST_SOS]           = {&wd_img_applist_sos_icon,             "SOS??????",  applist_item_clicked_cb,      (void*)SCREEN_ID_SOS},
+..\Src\lvgl_user_ui_manager\app_applist\app_applist.c(54): warning:  #144-D: a value of type "void *" cannot be used to initialize an entity of type "screen_id_e"
+      [APPLIST_REMINDER]      = {&wd_img_applist_alarm_center_icon,    "????????????", applist_item_clicked_cb,      (void*)SCREEN_ID_REMINDER},
+..\Src\lvgl_user_ui_manager\app_applist\app_applist.c(55): warning:  #144-D: a value of type "void *" cannot be used to initialize an entity of type "screen_id_e"
+      [APPLIST_CARDIOGRAM]    = {&wd_img_applist_ecg_icon,             "????????????", applist_item_clicked_cb,      (void*)SCREEN_ID_CARDIOGRAM},
+..\Src\lvgl_user_ui_manager\app_applist\app_applist.c(56): warning:  #144-D: a value of type "void *" cannot be used to initialize an entity of type "screen_id_e"
+      [APPLIST_SPORT]         = {&wd_img_applist_sport_monitor_icon,   "????????????", applist_item_clicked_cb,      (void*)SCREEN_ID_SPORT},
+..\Src\lvgl_user_ui_manager\app_applist\app_applist.c(57): warning:  #144-D: a value of type "void *" cannot be used to initialize an entity of type "screen_id_e"
+      [APPLIST_ENVIRONMENT]   = {&wd_img_applist_environment_icon,     "????????????", applist_item_clicked_cb,      (void*)SCREEN_ID_ENVIRONMENT},
+..\Src\lvgl_user_ui_manager\app_applist\app_applist.c(58): warning:  #144-D: a value of type "void *" cannot be used to initialize an entity of type "screen_id_e"
+      [APPLIST_SYSTEM_SET]    = {&wd_img_applist_system_settings_icon, "????????????", applist_item_clicked_cb,      (void*)SCREEN_ID_SYSTEM_SET},
+..\Src\lvgl_user_ui_manager\app_applist\app_applist.c(114): warning:  #767-D: conversion from pointer to smaller integer
+      screen_id_e jump_id = (screen_id_e)lv_event_get_user_data(e);
+..\Src\lvgl_user_ui_manager\app_applist\app_applist.c(121): warning:  #767-D: conversion from pointer to smaller integer
+      screen_id_e jump_id = (screen_id_e)lv_event_get_user_data(e);
+..\Src\lvgl_user_ui_manager\app_applist\app_applist.c(127): warning:  #223-D: function "debug_monkey_is_start" declared implicitly
+      if (debug_monkey_is_start())
+..\Src\lvgl_user_ui_manager\app_applist\app_applist.c(132): warning:  #767-D: conversion from pointer to smaller integer
+      screen_id_e jump_id = (screen_id_e)lv_event_get_user_data(e);
+..\Src\lvgl_user_ui_manager\app_applist\app_applist.c(125): warning:  #177-D: function "applist_debug_clicked_cb"  was declared but never referenced
+  static void applist_debug_clicked_cb(lv_event_t* e)
+..\Src\lvgl_user_ui_manager\app_applist\app_applist.c: 17 warnings, 0 errors
+compiling service_body.c...
+compiling gh_demo_reg_array.c...
+compiling app_logo.c...
+..\Src\lvgl_user_ui_manager\app_logo\app_logo.c(4): warning:  #47-D: incompatible redefinition of macro "APP_LOG_TAG"  (declared at line 74 of "..\..\..\..\..\components\libraries\app_log\app_log.h")
+  #define APP_LOG_TAG "logo"
+..\Src\lvgl_user_ui_manager\app_logo\app_logo.c(19): warning:  #223-D: function "app_screen_keep_on" declared implicitly
+  	app_screen_keep_on(false);
+..\Src\lvgl_user_ui_manager\app_logo\app_logo.c(25): warning:  #223-D: function "cookie_obj_create" declared implicitly
+  	lv_obj_t* screen = cookie_obj_create(NULL, LV_HOR_RES, LV_VER_RES, LV_DIR_VER);
+..\Src\lvgl_user_ui_manager\app_logo\app_logo.c(25): warning:  #144-D: a value of type "int" cannot be used to initialize an entity of type "lv_obj_t *"
+  	lv_obj_t* screen = cookie_obj_create(NULL, LV_HOR_RES, LV_VER_RES, LV_DIR_VER);
+..\Src\lvgl_user_ui_manager\app_logo\app_logo.c(28): warning:  #223-D: function "app_graphics_mem_malloc" declared implicitly
+  	if(wd_img_logo_psram.data != NULL) wd_img_logo_psram.data = app_graphics_mem_malloc(wd_img_logo_psram.data_size);
+..\Src\lvgl_user_ui_manager\app_logo\app_logo.c(28): warning:  #513-D: a value of type "int" cannot be assigned to an entity of type "const uint8_t *"
+  	if(wd_img_logo_psram.data != NULL) wd_img_logo_psram.data = app_graphics_mem_malloc(wd_img_logo_psram.data_size);
+..\Src\lvgl_user_ui_manager\app_logo\app_logo.c(29): warning:  #223-D: function "lv_port_res_mode_set" declared implicitly
+  	lv_port_res_mode_set(2);
+..\Src\lvgl_user_ui_manager\app_logo\app_logo.c(49): warning:  #223-D: function "app_screen_keep_on" declared implicitly
+  	app_screen_keep_on(true);
+..\Src\lvgl_user_ui_manager\app_logo\app_logo.c(57): warning:  #223-D: function "app_graphics_mem_free" declared implicitly
+          app_graphics_mem_free((void*)wd_img_logo_psram.data);
+..\Src\lvgl_user_ui_manager\app_logo\app_logo.c: 9 warnings, 0 errors
+compiling service_environment.c...
+compiling gh_drv_config.c...
+compiling gh_drv_dump.c...
+compiling gh_drv_control.c...
+compiling gh_drv_interface.c...
+compiling gh_movedetect.c...
+compiling gh_agc.c...
+compiling gh_ecg.c...
+compiling gh_uprotocol.c...
+compiling gh_zip.c...
+compiling gh3x2x_demo_algo_frame.c...
+compiling gh_multi_sen_pro.c...
+compiling service_hr_bo.c...
+compiling service_notice.c...
+compiling service_setting.c...
+compiling service_sport.c...
+compiling gh_demo.c...
+compiling gh_demo_hook.c...
+..\Src\gh3x2x\gh3x2x_code\3-demo_code\demo_kernel_code\kernel\gh_demo_hook.c(183): warning:  #177-D: variable "ble_data"  was declared but never referenced
+      char ble_data[50];
+..\Src\gh3x2x\gh3x2x_code\3-demo_code\demo_kernel_code\kernel\gh_demo_hook.c: 1 warning, 0 errors
+compiling gh_demo_user.c...
+..\Src\gh3x2x\gh3x2x_code\3-demo_code\demo_kernel_code\kernel\gh_demo_user.c(863): warning:  #177-D: variable "error_code"  was declared but never referenced
+      sdk_err_t error_code;
+..\Src\gh3x2x\gh3x2x_code\3-demo_code\demo_kernel_code\kernel\gh_demo_user.c: 1 warning, 0 errors
+compiling service_key.c...
+compiling gh3x2x_demo_algo_hook.c...
+..\Src\gh3x2x\gh3x2x_code\3-demo_code\demo_algo_code\goodix_algo_application\src\gh3x2x_demo_algo_hook.c(118): warning:  #177-D: variable "BLE_TX_BUFF"  was declared but never referenced
+  	char BLE_TX_BUFF[20];
+..\Src\gh3x2x\gh3x2x_code\3-demo_code\demo_algo_code\goodix_algo_application\src\gh3x2x_demo_algo_hook.c(157): warning:  #167-D: argument of type "GS32 *" is incompatible with parameter of type "uint32_t *"
+  	app_hrv_update( pstAlgoResult->snResult[5], pstAlgoResult->snResult);
+..\Src\gh3x2x\gh3x2x_code\3-demo_code\demo_algo_code\goodix_algo_application\src\gh3x2x_demo_algo_hook.c: 2 warnings, 0 errors
+linking...
+Program Size: Code=191192 RO-data=65632 RW-data=3976 ZI-data=8863944  
+FromELF: creating hex file...
+After Build - User command #1: fromelf.exe --text -c --output Listings\graphics_lvgl_831_template.s   Objects\graphics_lvgl_831_template.axf
+After Build - User command #2: fromelf.exe --bin --output Listings\graphics_lvgl_831_template.bin Objects\graphics_lvgl_831_template.axf
+".\Objects\graphics_lvgl_831_template.axf" - 0 Error(s), 355 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.3.0.pack
+                ARM.CMSIS.5.3.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+
+<h2>Collection of Component include folders:</h2>
+  D:/Software/Keil/keil5 538A/ARM/Packs/ARM/CMSIS/5.3.0/Device/ARM/ARMCM4/Include
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:59
+</pre>
+</body>
+</html>
