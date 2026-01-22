@@ -158,3 +158,4 @@
 .\objects\main.o: ..\..\..\..\..\external\segger_rtt\SEGGER_RTT.h
 .\objects\main.o: ..\..\..\..\..\external\segger_rtt\SEGGER_RTT_Conf.h
 .\objects\main.o: ..\Src\service\app_ecg_baremetal.h
+.\objects\main.o: ..\Src\WIFI\WIFI.h

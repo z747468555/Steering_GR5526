@@ -53,7 +53,7 @@
 #include "app_service_task.h"
 #include "SEGGER_RTT.h"
 #include "app_ecg_baremetal.h"
-
+#include "WIFI.h"
 
 /*
  * DEFINE
@@ -61,7 +61,7 @@
  */
 /* 自动启动ECG测量 */
 #define AUTO_START_ECG_DELAY_MS     300
-
+char testUart[6]= {"UART"};
 
 /*
  * 回调函数实现
@@ -83,6 +83,7 @@ static void ecg_data_handler(int16_t *data, uint32_t len)
      * - 存储到Flash
      * - 进行进一步分析
      */
+		ecg_uart_send_raw_data(data, len);
     for (uint32_t i = 0; i < len; i++) {
         SEGGER_RTT_printf(0, "ECG,%d,%d\r\n", i, data[i]);
     }
@@ -159,12 +160,14 @@ int main(void)
 //    app_graphics_adjust_dcore_policy();                             /*<Should call this firstly if using graphics modules */
     SetSerialClock(SERIAL_N96M_CLK);
     app_periph_init();                                              /*<Init user periph .*/
-	
+		UART_Init();
 		SEGGER_RTT_printf(0,"board init\r\n");
-
+		app_uart_transmit_sync(WIFI_UART_ID,(uint8_t*)"SYSINIT\r\n", strlen("SYSINIT\r\n"),2);
 //    osal_task_create("create_task", vStartTasks, 1024, 10, NULL);
 //    osal_task_start();
-//    for (;;);                                                       /*< Never perform here */
+//    for (;;);     
+	/*< Never perform here */
+		
 		ECG_Init();
     while (1)
     {

@@ -146,4 +146,10 @@
 .\objects\gh_demo_user.o: ..\..\..\..\..\components\libraries\app_timer\app_timer.h
 .\objects\gh_demo_user.o: ..\..\..\..\..\external\segger_rtt\SEGGER_RTT.h
 .\objects\gh_demo_user.o: ..\..\..\..\..\external\segger_rtt\SEGGER_RTT_Conf.h
+.\objects\gh_demo_user.o: ..\Src\WIFI\WIFI.h
+.\objects\gh_demo_user.o: ..\..\..\..\..\platform\boards\board_SK.h
+.\objects\gh_demo_user.o: ..\..\..\..\..\components\libraries\app_key\app_key.h
+.\objects\gh_demo_user.o: ..\..\..\..\..\components\libraries\app_key\app_key_core.h
+.\objects\gh_demo_user.o: ..\..\..\..\..\drivers\inc\app_uart.h
+.\objects\gh_demo_user.o: ..\..\..\..\..\components\libraries\ring_buffer\ring_buffer.h
 .\objects\gh_demo_user.o: ..\Src\gh3x2x\gh3x2x_code\3-demo_code\demo_algo_code\goodix_algo_application\inc\gh3x2x_demo_algo_call.h

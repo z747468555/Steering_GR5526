@@ -125,4 +125,5 @@
 .\objects\gh_demo.o: ..\..\..\..\..\drivers\inc\hal\gr55xx_delay.h
 .\objects\gh_demo.o: ..\..\..\..\..\components\libraries\ring_buffer\ring_buffer.h
 .\objects\gh_demo.o: ..\..\..\..\..\drivers\inc\app_dma.h
+.\objects\gh_demo.o: ..\Src\WIFI\WIFI.h
 .\objects\gh_demo.o: ..\Src\gh3x2x\gh3x2x_code\3-demo_code\demo_algo_code\goodix_algo_application\inc\gh3x2x_demo_algo_call.h

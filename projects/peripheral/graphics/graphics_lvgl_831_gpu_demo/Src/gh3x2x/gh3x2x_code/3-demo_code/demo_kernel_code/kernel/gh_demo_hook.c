@@ -20,7 +20,8 @@
 #include "gh3x2x_demo_algo_call.h"
 #endif
 #include "service_hr_bo.h"
-
+#include "SEGGER_RTT.h"
+#include "app_ecg_baremetal.h"
 extern unsigned char GH3220_ADT, GH3220_HR, GH3220_SPO2, ECG_Index;
 
 
@@ -306,9 +307,11 @@ void gh3x2x_write_algo_config_hook(GU16 usVirtualRegAddr, GU16 usVirtualRegValue
 void Gh3x2x_LeadOnEventHook(void)
 {
 #if LEAD_ON_OFF_FUNC	
-	Gh3x2xDemoStartSampling(GH3X2X_FUNCTION_ECG);
-	GH3X2X_FifoWatermarkThrConfig(150);
-	gh3220_ecg_print_en_timer_start();
+	SEGGER_RTT_printf(0, ">>> Lead ON <<<\r\n");
+	app_ecg_start();
+//	Gh3x2xDemoStartSampling(GH3X2X_FUNCTION_ECG);
+//	GH3X2X_FifoWatermarkThrConfig(150);
+//	gh3220_ecg_print_en_timer_start();
 #endif
 }
 
@@ -327,8 +330,10 @@ void Gh3x2x_LeadOnEventHook(void)
 void Gh3x2x_LeadOffEventHook(void)
 {
 #if LEAD_ON_OFF_FUNC	
-	Gh3x2xDemoStopSampling(GH3X2X_FUNCTION_ECG);
-	gh3220_ecg_print_set(false);
+	SEGGER_RTT_printf(0, ">>> Lead OFF <<<\r\n");
+//	Gh3x2xDemoStopSampling(GH3X2X_FUNCTION_ECG);
+	app_ecg_stop();
+//	gh3220_ecg_print_set(false);
 #endif
 }
 #endif

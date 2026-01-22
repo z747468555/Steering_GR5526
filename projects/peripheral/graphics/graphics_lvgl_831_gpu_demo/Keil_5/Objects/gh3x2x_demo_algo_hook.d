@@ -149,4 +149,16 @@
 .\objects\gh3x2x_demo_algo_hook.o: ..\..\..\..\..\components\graphics\lvgl_port\os_adapter\inc\osal_task.h
 .\objects\gh3x2x_demo_algo_hook.o: ..\..\..\..\..\components\graphics\lvgl_port\os_adapter\inc\osal_timer.h
 .\objects\gh3x2x_demo_algo_hook.o: ..\Src\service\service_notice.h
+.\objects\gh3x2x_demo_algo_hook.o: ..\Src\WIFI\WIFI.h
+.\objects\gh3x2x_demo_algo_hook.o: ..\..\..\..\..\platform\boards\board_SK.h
+.\objects\gh3x2x_demo_algo_hook.o: ..\..\..\..\..\components\libraries\app_key\app_key.h
+.\objects\gh3x2x_demo_algo_hook.o: ..\..\..\..\..\components\libraries\app_key\app_key_core.h
+.\objects\gh3x2x_demo_algo_hook.o: ..\..\..\..\..\drivers\inc\app_gpiote.h
+.\objects\gh3x2x_demo_algo_hook.o: ..\..\..\..\..\drivers\inc\app_io.h
+.\objects\gh3x2x_demo_algo_hook.o: ..\..\..\..\..\drivers\inc\app_drv_error.h
+.\objects\gh3x2x_demo_algo_hook.o: ..\..\..\..\..\drivers\inc\app_drv_config.h
+.\objects\gh3x2x_demo_algo_hook.o: ..\..\..\..\..\drivers\inc\app_uart.h
+.\objects\gh3x2x_demo_algo_hook.o: ..\..\..\..\..\components\libraries\ring_buffer\ring_buffer.h
+.\objects\gh3x2x_demo_algo_hook.o: ..\..\..\..\..\drivers\inc\app_dma.h
+.\objects\gh3x2x_demo_algo_hook.o: ..\Src\service\app_ecg_baremetal.h
 .\objects\gh3x2x_demo_algo_hook.o: ..\Src\service\app_3220_task.h

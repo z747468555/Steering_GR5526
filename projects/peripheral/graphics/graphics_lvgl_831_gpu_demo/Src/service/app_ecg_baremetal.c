@@ -11,6 +11,7 @@
 #include "app_ecg_baremetal.h"
 #include "SEGGER_RTT.h"
 #include <string.h>
+#include "WIFI.h"
 
 /*
  * 宏定义
@@ -92,6 +93,7 @@ static void handle_ecg_start(void)
 #if LEAD_ON_OFF_FUNC
     Gh3x2xDemoStopSampling(GH3X2X_FUNCTION_SPO2 | GH3X2X_FUNCTION_HR | GH3X2X_FUNCTION_ADT);
     Gh3x2xDemoStartSamplingWithCfgSwitch(GH3X2X_FUNCTION_LEAD_DET, 1);
+		app_uart_transmit_sync(WIFI_UART_ID,(uint8_t*)"ecg_start\r\n", strlen("ecg_start\r\n"),2);
 #else
     Gh3x2xDemoStopSampling(GH3X2X_FUNCTION_SPO2 | GH3X2X_FUNCTION_HR | GH3X2X_FUNCTION_ADT);
     Gh3x2xDemoStartSampling(GH3X2X_FUNCTION_ECG);
@@ -116,6 +118,7 @@ static void handle_ecg_stop(void)
     s_ecg_print_timer_active = false;
     s_ecg_hr = 0xff;
     s_ecg_running = false;
+		app_uart_transmit_sync(WIFI_UART_ID,(uint8_t*)"ecg_stop\r\n", strlen("ecg_stop\r\n"),2);
 }
 
 /**
@@ -169,13 +172,14 @@ void app_ecg_poll(void)
 {
     /* 1. 处理GH3220中断 */
     if (INT3220) {
-				SEGGER_RTT_printf(0,"GH3220 intrrupt\r\n");
+//				SEGGER_RTT_printf(0,"GH3220 intrrupt\r\n");
+				app_uart_transmit_sync(WIFI_UART_ID,(uint8_t*)"INT\r\n", strlen("INT\r\n"),5);
         INT3220 = 0;
         Gh3x2xDemoInterruptProcess();
     }
     
     /* 2. 检查打印使能定时器 */
-    check_ecg_print_timer();
+//    check_ecg_print_timer();
     
     /* 3. 处理待处理事件 */
     process_pending_event();

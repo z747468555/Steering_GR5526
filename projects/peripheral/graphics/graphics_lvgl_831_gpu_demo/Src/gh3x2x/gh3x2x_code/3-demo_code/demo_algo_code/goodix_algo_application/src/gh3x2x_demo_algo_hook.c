@@ -7,7 +7,8 @@
 #include "gh_demo_config.h"
 #include "gus.h"
 #include "service_hr_bo.h"
-
+#include "WIFI.h"
+#include "app_ecg_baremetal.h"
 #if (__GOODIX_ALGO_CALL_MODE__)
 extern unsigned char GH3220_HR, GH3220_SPO2;
 
@@ -190,9 +191,15 @@ void GH3X2X_EcgAlgorithmResultReport(STGh3x2xAlgoResult * pstAlgoResult, GU32 lu
     //GH3X2X_INFO_LOG("%d: ecg = %d uV, %d bpm\r\n",lubFrameId, pstAlgoResult->snResult[0] * 10, pstAlgoResult->snResult[1]);
 	
 	ecg_data[index] = (int16_t)(pstAlgoResult->snResult[0]);
+	
+	app_ecg_data_received(ecg_data,1);
+	
+//	ecg_uart_send_raw_data(ecg_data,1);
+	
 	ecg_avg += ecg_data[index];
 	index++;
-	
+
+//	SEGGER_RTT_printf(0,"ECG:%d\r\n",ecg_data[index]);
 //	{
 //		char ble_tx[32];
 //		sprintf( ble_tx, "t:%d:%d\r\n", lubFrameId, pstAlgoResult->snResult[0]);

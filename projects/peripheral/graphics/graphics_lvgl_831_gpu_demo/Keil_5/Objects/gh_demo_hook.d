@@ -161,3 +161,6 @@
 .\objects\gh_demo_hook.o: ..\..\..\..\..\components\graphics\lvgl_port\os_adapter\inc\osal_sema.h
 .\objects\gh_demo_hook.o: ..\..\..\..\..\components\graphics\lvgl_port\os_adapter\inc\osal_timer.h
 .\objects\gh_demo_hook.o: ..\Src\service\service_notice.h
+.\objects\gh_demo_hook.o: ..\..\..\..\..\external\segger_rtt\SEGGER_RTT.h
+.\objects\gh_demo_hook.o: ..\..\..\..\..\external\segger_rtt\SEGGER_RTT_Conf.h
+.\objects\gh_demo_hook.o: ..\Src\service\app_ecg_baremetal.h

@@ -20,6 +20,7 @@
 #include "goodix_log.h"
 #include "gh_drv_control.h"
 #include "led.h"
+#include "WIFI.h"
 
 #if (__DRIVER_LIB_MODE__ == __DRV_LIB_WITH_ALGO__)
 #include "gh3x2x_demo_algo_call.h"
@@ -1580,7 +1581,7 @@ int Gh3x2xDemoInit(void)
     GH3X2X_HardReset();
     #else
 	//
-	hal_gh3x2x_reset_pin_high();
+		hal_gh3x2x_reset_pin_high();
 	//
     GH3X2X_SoftReset();
     #endif
@@ -1604,11 +1605,13 @@ int Gh3x2xDemoInit(void)
     {
         Gh3x2xGetConfigVersion(&g_stGh3x2xCfgListArr[0]);
         GH3X2X_INFO_LOG("Gh3x2xDemoInit:init success\r\n");
+				app_uart_transmit_sync(WIFI_UART_ID,(uint8_t*)"DemoInit success\r\n", strlen("DemoInit success\r\n"),2);
     }
     else
     {
         g_uchGh3x2xRegCfgArrIndex = DRV_LIB_REG_CFG_EMPTY;
         GH3X2X_INFO_LOG("Gh3x2xDemoInit:init fail, error code: %d\r\n", schret);
+				app_uart_transmit_sync(WIFI_UART_ID,(uint8_t*)"DemoInit fail\r\n", strlen("DemoInit fail\r\n"),2);
         return schret;
     }
     GH3X2X_SetMaxNumWhenReadFifo(__GH3X2X_RAWDATA_BUFFER_SIZE__);
@@ -1649,6 +1652,7 @@ int Gh3x2xDemoInit(void)
     GH3X2X_ConfigLeadOffThr(LEADOFF_DET_IQ_AMP_THR_uV, LEADOFF_DET_IQ_AMP_DIFF_THR_uV,LEADOFF_DET_IQ_VAL_THR_mV);
 		#endif
     g_uchGh3x2xInitFlag = 1;
+		app_uart_transmit_sync(WIFI_UART_ID,(uint8_t*)"InitFlag\r\n", strlen("InitFlag\r\n"),2);
     #if __GH3X2X_MEM_POOL_CHECK_EN__
     g_uchGh3x2xMemPollHaveGetCheckSum = 0;
     #endif
@@ -1702,6 +1706,7 @@ void Gh3x2xDemoInterruptProcess(void)
 	if(0 == g_uchGh3x2xInitFlag)
     {
         GH3X2X_INFO_LOG("[%s]:gh3x2x is not init!!!\r\n", __FUNCTION__);
+				app_uart_transmit_sync(WIFI_UART_ID,(uint8_t*)"not init\r\n", strlen("not init\r\n"),2);
         return;
     }
 
@@ -1810,10 +1815,13 @@ void Gh3x2xDemoInterruptProcess(void)
         if(0 != (usGotEvent & GH3X2X_IRQ_MSK_WEAR_ON_BIT))
         {
             GH3X2X_INFO_LOG("Got hardware wear on !!! \r\n");
+						app_uart_transmit_sync(WIFI_UART_ID,(uint8_t*)"wear on\r\n", strlen("wear on\r\n"),2);
+					
         }
         if(0 != (usGotEvent & GH3X2X_IRQ_MSK_WEAR_OFF_BIT))
         {
             GH3X2X_INFO_LOG("Got hardware wear off !!! \r\n");
+						app_uart_transmit_sync(WIFI_UART_ID,(uint8_t*)"wear off\r\n", strlen("wear off\r\n"),2);
         }
         #endif
         #endif
@@ -1918,6 +1926,7 @@ void Gh3x2xDemoInterruptProcess(void)
             #if !(__GH3X2X_CASCADE_EN__)
                 if (GH3X2X_RET_READ_FIFO_CONTINUE == GH3X2X_ReadFifodata(g_puchGh3x2xReadRawdataBuffer, &g_usGh3x2xReadRawdataLen, usFifoByteNum))
                 {
+									app_uart_transmit_sync(WIFI_UART_ID,(uint8_t*)"2", strlen("2"),5);
                     GH3X2X_SetSoftEvent(GH3X2X_SOFT_EVENT_NEED_TRY_READ_FIFO);
                 }
             #else

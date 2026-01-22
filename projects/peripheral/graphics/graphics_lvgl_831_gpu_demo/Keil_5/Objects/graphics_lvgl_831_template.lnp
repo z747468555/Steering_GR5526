@@ -218,6 +218,7 @@
 ".\objects\gus.o"
 ".\objects\ble_prf_utils.o"
 ".\objects\app_ecg_baremetal.o"
+".\objects\wifi.o"
 ".\objects\main.o"
 ".\objects\segger_rtt.o"
 ".\objects\segger_rtt_printf.o"

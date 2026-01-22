@@ -132,3 +132,14 @@
 .\objects\app_ecg_baremetal.o: ..\Src\service\app_ecg_baremetal.h
 .\objects\app_ecg_baremetal.o: ..\..\..\..\..\external\segger_rtt\SEGGER_RTT.h
 .\objects\app_ecg_baremetal.o: ..\..\..\..\..\external\segger_rtt\SEGGER_RTT_Conf.h
+.\objects\app_ecg_baremetal.o: ..\Src\WIFI\WIFI.h
+.\objects\app_ecg_baremetal.o: ..\..\..\..\..\platform\boards\board_SK.h
+.\objects\app_ecg_baremetal.o: ..\..\..\..\..\components\libraries\app_key\app_key.h
+.\objects\app_ecg_baremetal.o: ..\..\..\..\..\components\libraries\app_key\app_key_core.h
+.\objects\app_ecg_baremetal.o: ..\..\..\..\..\drivers\inc\app_gpiote.h
+.\objects\app_ecg_baremetal.o: ..\..\..\..\..\drivers\inc\app_io.h
+.\objects\app_ecg_baremetal.o: ..\..\..\..\..\drivers\inc\app_drv_error.h
+.\objects\app_ecg_baremetal.o: ..\..\..\..\..\drivers\inc\app_drv_config.h
+.\objects\app_ecg_baremetal.o: ..\..\..\..\..\drivers\inc\app_uart.h
+.\objects\app_ecg_baremetal.o: ..\..\..\..\..\components\libraries\ring_buffer\ring_buffer.h
+.\objects\app_ecg_baremetal.o: ..\..\..\..\..\drivers\inc\app_dma.h

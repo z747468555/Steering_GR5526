@@ -24,6 +24,7 @@
 #include "osal_task.h"
 #include "app_timer.h"
 #include "SEGGER_RTT.h"
+#include "WIFI.h"
 
 #define GH_INT_IO_TYPE APP_IO_TYPE_AON
 #define GH_INT_PIN     APP_IO_PIN_4
@@ -454,6 +455,7 @@ void gh3x2x_int_callback(app_io_evt_t *p_evt)
 #if (__NORMAL_INT_PROCESS_MODE__ == __INTERRUPT_PROCESS_MODE__ || __MIX_INT_PROCESS_MODE__ == __INTERRUPT_PROCESS_MODE__)
         hal_gh3x2x_int_handler_call_back();
         INT3220 = 1;
+			app_uart_transmit_sync(WIFI_UART_ID,(uint8_t*)"1\r\n", strlen("1\r\n"),5);
 #endif
 }
 
