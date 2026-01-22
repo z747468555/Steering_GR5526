@@ -63,6 +63,11 @@ void app_ecg_poll(void);
 void app_ecg_start(void);
 
 /**
+ * @brief 暂停ECG测量
+ */
+void app_ecg_pause(void);
+
+/**
  * @brief 停止ECG测量
  */
 void app_ecg_stop(void);

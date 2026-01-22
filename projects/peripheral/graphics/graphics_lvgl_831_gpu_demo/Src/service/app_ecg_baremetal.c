@@ -103,6 +103,13 @@ static void handle_ecg_start(void)
     s_ecg_running = true;
 }
 
+// Lead-Off时调用（只停止ECG，保持Lead检测）
+void app_ecg_pause(void)
+{
+    Gh3x2xDemoStopSampling(GH3X2X_FUNCTION_ECG);
+    s_ecg_running = false;
+}
+
 /**
  * @brief 处理ECG停止事件
  */

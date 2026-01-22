@@ -308,8 +308,8 @@ void Gh3x2x_LeadOnEventHook(void)
 {
 #if LEAD_ON_OFF_FUNC	
 	SEGGER_RTT_printf(0, ">>> Lead ON <<<\r\n");
-	app_ecg_start();
-//	Gh3x2xDemoStartSampling(GH3X2X_FUNCTION_ECG);
+//	app_ecg_start();
+	Gh3x2xDemoStartSampling(GH3X2X_FUNCTION_ECG);
 //	GH3X2X_FifoWatermarkThrConfig(150);
 //	gh3220_ecg_print_en_timer_start();
 #endif
@@ -332,7 +332,7 @@ void Gh3x2x_LeadOffEventHook(void)
 #if LEAD_ON_OFF_FUNC	
 	SEGGER_RTT_printf(0, ">>> Lead OFF <<<\r\n");
 //	Gh3x2xDemoStopSampling(GH3X2X_FUNCTION_ECG);
-	app_ecg_stop();
+	app_ecg_pause();
 //	gh3220_ecg_print_set(false);
 #endif
 }
